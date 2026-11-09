@@ -1,0 +1,5 @@
+{
+  "PROJECT_ID": "your-firebase-project",
+  "BUNDLE_ID": "sa.nazlah.app",
+  "note": "Download the real GoogleService-Info.plist from Firebase Console. Do not commit it if it contains production secrets you want to keep private."
+}

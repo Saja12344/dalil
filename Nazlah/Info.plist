@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>GOOGLE_MAPS_API_KEY</key>
+	<string>$(GOOGLE_MAPS_API_KEY)</string>
+	<key>CFBundleAllowMixedLocalizations</key>
+	<true/>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+    <string>سهم</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>NSCameraUsageDescription</key>
+	<string>حواليك يستخدم الكاميرا فقط عندما تلتقط صورة لمكان تضيفه.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>دليلك يستخدم موقعك لعرض أقرب محطة، ومتابعة رحلتك على الخريطة حتى تصل.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>دليلك يتابع موقعك أثناء الرحلة النشطة فقط، عشان ينبّهك عند كل محطة وخطوة تالية.</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>location</string>
+	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>حواليك يحتاج الوصول للصور فقط عندما تضيف صور مكان من جهازك.</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Alexandria-Regular.ttf</string>
+		<string>Alexandria-SemiBold.ttf</string>
+		<string>Alexandria-Bold.ttf</string>
+		<string>Alexandria-ExtraBold.ttf</string>
+		<string>Changa-Variable.ttf</string>
+	</array>
+	<key>UILaunchScreen</key>
+	<dict/>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+</dict>
+</plist>

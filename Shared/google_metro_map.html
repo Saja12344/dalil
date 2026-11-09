@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <style>
+    html, body, #map { height: 100%; margin: 0; background: #0F1420; }
+    .leaflet-container { background: #0F1420; font-family: -apple-system, sans-serif; }
+    .leaflet-control-attribution { font-size: 9px; }
+    .leaflet-marker-icon, .leaflet-marker-shadow { display: none; }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    let map, bootPayload;
+
+    function latlng(p) { return [p.lat, p.lng]; }
+
+    function boot(payload) {
+      bootPayload = payload;
+      if (window.L) draw(payload);
+    }
+
+    function draw(p) {
+      if (map) {
+        map.remove();
+        map = null;
+      }
+      const interactive = p.interactive !== false;
+      map = L.map('map', {
+        zoomControl: false,
+        attributionControl: true,
+        dragging: interactive,
+        scrollWheelZoom: interactive,
+        doubleClickZoom: interactive,
+        boxZoom: interactive,
+        keyboard: interactive,
+        tap: interactive,
+        touchZoom: interactive
+      }).setView(latlng(p.center), p.zoom || 12);
+
+      L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
+        attribution: 'Tiles &copy; Esri',
+        maxZoom: 19
+      }).addTo(map);
+
+      (p.lines || []).forEach(function (line) {
+        if (!line.path || line.path.length < 2) return;
+        L.polyline(line.path.map(latlng), {
+          color: line.color,
+          opacity: line.dim ? 0.25 : 1,
+          weight: line.width || 4,
+          lineJoin: 'round',
+          lineCap: 'round',
+          interactive: false
+        }).addTo(map);
+      });
+
+      (p.stations || []).forEach(function (s) {
+        L.circleMarker(latlng(s.pos), {
+          radius: s.big ? 7 : 5,
+          color: '#0F1420',
+          weight: 1.5,
+          fillColor: s.color || '#FFFFFF',
+          fillOpacity: 1
+        }).addTo(map).on('click', function () { post('station', s.id); });
+      });
+
+      (p.places || []).forEach(function (place) {
+        L.circleMarker(latlng(place.pos), {
+          radius: 6,
+          color: '#0F1420',
+          weight: 1.5,
+          fillColor: '#FF5A1F',
+          fillOpacity: 1
+        }).addTo(map).on('click', function () { post('place', place.id); });
+      });
+
+      if (p.walk && p.walk.length >= 2) {
+        const walk = p.walk.map(latlng);
+        L.polyline(walk, {
+          color: '#FF5A1F',
+          opacity: 1,
+          weight: 5,
+          lineJoin: 'round',
+          interactive: false
+        }).addTo(map);
+        map.fitBounds(walk, { padding: [48, 48] });
+      }
+    }
+
+    function post(channel, id) {
+      if (window.NazlahMap && window.NazlahMap.postMessage) {
+        window.NazlahMap.postMessage(JSON.stringify({ channel: channel, id: id }));
+      }
+      if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.nazlah) {
+        window.webkit.messageHandlers.nazlah.postMessage({ channel: channel, id: id });
+      }
+    }
+
+    window.boot = boot;
+  </script>
+</body>
+</html>

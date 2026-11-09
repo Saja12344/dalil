@@ -1,0 +1,37 @@
+# Xcode
+DerivedData/
+build/
+*.xcuserstate
+*.xccheckout
+*.xcscmblueprint
+xcuserdata/
+*.moved-aside
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# XcodeGen
+/*.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
+
+# Secrets — never commit keys
+Config/Secrets.xcconfig
+Nazlah/Resources/GoogleService-Info.plist
+*.p8
+*.p12
+*.mobileprovision
+
+# SPM
+.build/
+.swiftpm/
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Python
+__pycache__/
+
+# Local tooling
+.env
+.env.*

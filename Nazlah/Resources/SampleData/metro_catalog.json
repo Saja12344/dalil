@@ -1,0 +1,3039 @@
+{
+  "attribution": {
+    "stationNames": "Royal Commission for Riyadh City open data: metro-stations-in-riyadh-by-metro-line-and-station-type-2024.",
+    "coordinates": "Official RCRC geo_point_2d (2024/2026 station dataset). Interchanges averaged across line records.",
+    "schematic": "Official RCRC metro-lines-in-riyadh-2024 LineString geometries rendered on MapKit.",
+    "exits": "Field exits from TikTok plates (verified) and caption/field notes (pending). Coordinates are offset from the station node, not surveyed door positions."
+  },
+  "lines": [
+    {
+      "id": "blue",
+      "nameAr": "المسار الأزرق",
+      "nameEn": "Blue Line",
+      "colorHex": "#00ADE5",
+      "displayOrder": 1,
+      "shortCode": "1",
+      "stationIds": [
+        "sabb",
+        "dr_sulaiman_al_habib",
+        "kafd",
+        "al_muruj",
+        "king_fahd_district",
+        "king_fahd_district_2",
+        "stc",
+        "al_wurud_2",
+        "al_urubah",
+        "alinma",
+        "bank_albilad",
+        "king_fahd_library",
+        "moi",
+        "al_murabba",
+        "jawazat",
+        "national_museum",
+        "al_batha",
+        "qasr_al_hokm",
+        "al_oud",
+        "skirinah",
+        "manfouhah",
+        "iman_hospital",
+        "public_transport_center",
+        "al_aziziyah",
+        "ad_dar_al_baida"
+      ],
+      "path": [
+        {
+          "latitude": 24.5535697,
+          "longitude": 46.7682235
+        },
+        {
+          "latitude": 24.5538853,
+          "longitude": 46.7687957
+        },
+        {
+          "latitude": 24.5555366,
+          "longitude": 46.7719752
+        },
+        {
+          "latitude": 24.5582402,
+          "longitude": 46.777007
+        },
+        {
+          "latitude": 24.5715888,
+          "longitude": 46.7698407
+        },
+        {
+          "latitude": 24.5795695,
+          "longitude": 46.7655182
+        },
+        {
+          "latitude": 24.5839896,
+          "longitude": 46.7624646
+        },
+        {
+          "latitude": 24.587915,
+          "longitude": 46.7604339
+        },
+        {
+          "latitude": 24.5957064,
+          "longitude": 46.756398
+        },
+        {
+          "latitude": 24.5920014,
+          "longitude": 46.7481023
+        },
+        {
+          "latitude": 24.5984127,
+          "longitude": 46.7450232
+        },
+        {
+          "latitude": 24.599514,
+          "longitude": 46.739115
+        },
+        {
+          "latitude": 24.6011296,
+          "longitude": 46.7352744
+        },
+        {
+          "latitude": 24.6104037,
+          "longitude": 46.7277069
+        },
+        {
+          "latitude": 24.6106681,
+          "longitude": 46.7275204
+        },
+        {
+          "latitude": 24.6182037,
+          "longitude": 46.7251259
+        },
+        {
+          "latitude": 24.6217973,
+          "longitude": 46.7236904
+        },
+        {
+          "latitude": 24.6249673,
+          "longitude": 46.7216563
+        },
+        {
+          "latitude": 24.6264352,
+          "longitude": 46.7196195
+        },
+        {
+          "latitude": 24.6286329,
+          "longitude": 46.7161543
+        },
+        {
+          "latitude": 24.6324833,
+          "longitude": 46.7154127
+        },
+        {
+          "latitude": 24.6382538,
+          "longitude": 46.7151097
+        },
+        {
+          "latitude": 24.6460807,
+          "longitude": 46.714164
+        },
+        {
+          "latitude": 24.6547689,
+          "longitude": 46.7105881
+        },
+        {
+          "latitude": 24.6579693,
+          "longitude": 46.7057604
+        },
+        {
+          "latitude": 24.6587205,
+          "longitude": 46.7041972
+        },
+        {
+          "latitude": 24.664129,
+          "longitude": 46.7027411
+        },
+        {
+          "latitude": 24.6671534,
+          "longitude": 46.7016439
+        },
+        {
+          "latitude": 24.6698065,
+          "longitude": 46.6987385
+        },
+        {
+          "latitude": 24.6725003,
+          "longitude": 46.6959603
+        },
+        {
+          "latitude": 24.706116,
+          "longitude": 46.6791634
+        },
+        {
+          "latitude": 24.7215637,
+          "longitude": 46.6712349
+        },
+        {
+          "latitude": 24.7269108,
+          "longitude": 46.6667195
+        },
+        {
+          "latitude": 24.7368902,
+          "longitude": 46.6634263
+        },
+        {
+          "latitude": 24.7622344,
+          "longitude": 46.6504848
+        },
+        {
+          "latitude": 24.7643192,
+          "longitude": 46.6458477
+        },
+        {
+          "latitude": 24.7743248,
+          "longitude": 46.6400865
+        },
+        {
+          "latitude": 24.7780041,
+          "longitude": 46.6420125
+        },
+        {
+          "latitude": 24.83659,
+          "longitude": 46.6153033
+        }
+      ]
+    },
+    {
+      "id": "red",
+      "nameAr": "المسار الأحمر",
+      "nameEn": "Red Line",
+      "colorHex": "#F0493A",
+      "displayOrder": 2,
+      "shortCode": "2",
+      "stationIds": [
+        "king_saud_university",
+        "king_salman_oasis",
+        "technology_city",
+        "takhassusi",
+        "stc",
+        "al_wurud_1",
+        "king_abdulaziz_road",
+        "ministry_of_education",
+        "an_nuzhah",
+        "riyadh_exhibition_center",
+        "khalid_bin_al_waleed",
+        "al_hamra",
+        "al_khaleej",
+        "ishbiliyah",
+        "king_fahd_sports_city"
+      ],
+      "path": [
+        {
+          "latitude": 24.7038552,
+          "longitude": 46.6235559
+        },
+        {
+          "latitude": 24.7139573,
+          "longitude": 46.6322862
+        },
+        {
+          "latitude": 24.7234854,
+          "longitude": 46.6546454
+        },
+        {
+          "latitude": 24.7268144,
+          "longitude": 46.6669018
+        },
+        {
+          "latitude": 24.7299002,
+          "longitude": 46.6708169
+        },
+        {
+          "latitude": 24.7332447,
+          "longitude": 46.6773624
+        },
+        {
+          "latitude": 24.7594047,
+          "longitude": 46.7393813
+        },
+        {
+          "latitude": 24.7681373,
+          "longitude": 46.7602769
+        },
+        {
+          "latitude": 24.7730186,
+          "longitude": 46.7721145
+        },
+        {
+          "latitude": 24.7764288,
+          "longitude": 46.776616
+        },
+        {
+          "latitude": 24.7781734,
+          "longitude": 46.7837842
+        },
+        {
+          "latitude": 24.7781779,
+          "longitude": 46.7846301
+        },
+        {
+          "latitude": 24.7797024,
+          "longitude": 46.7916904
+        },
+        {
+          "latitude": 24.7875141,
+          "longitude": 46.8034154
+        },
+        {
+          "latitude": 24.7962934,
+          "longitude": 46.8192472
+        },
+        {
+          "latitude": 24.8012532,
+          "longitude": 46.8273963
+        },
+        {
+          "latitude": 24.7917035,
+          "longitude": 46.8343786
+        },
+        {
+          "latitude": 24.7949347,
+          "longitude": 46.8411665
+        }
+      ]
+    },
+    {
+      "id": "orange",
+      "nameAr": "المسار البرتقالي",
+      "nameEn": "Orange Line",
+      "colorHex": "#F68D39",
+      "displayOrder": 3,
+      "shortCode": "3",
+      "stationIds": [
+        "jeddah_road",
+        "tuwaiq",
+        "ad_douh",
+        "western",
+        "aisha_bint_abi_bakr",
+        "dhahrat_al_badiah",
+        "sultanah",
+        "al_juradiyah",
+        "courts_complex",
+        "qasr_al_hokm",
+        "al_halah",
+        "al_marqab",
+        "as_salhiyah",
+        "first_industrial_city",
+        "railway",
+        "al_malaz",
+        "jarir_district",
+        "al_rajhi_grand_mosque",
+        "harun_al_rashid",
+        "an_naseem",
+        "hassan_bin_thabit",
+        "khashm_al_an"
+      ],
+      "path": [
+        {
+          "latitude": 24.5936574,
+          "longitude": 46.545572
+        },
+        {
+          "latitude": 24.5913363,
+          "longitude": 46.5433956
+        },
+        {
+          "latitude": 24.5883977,
+          "longitude": 46.5411058
+        },
+        {
+          "latitude": 24.5870121,
+          "longitude": 46.5415207
+        },
+        {
+          "latitude": 24.5839721,
+          "longitude": 46.5773312
+        },
+        {
+          "latitude": 24.5838342,
+          "longitude": 46.5803635
+        },
+        {
+          "latitude": 24.5842662,
+          "longitude": 46.583523
+        },
+        {
+          "latitude": 24.5859844,
+          "longitude": 46.5862272
+        },
+        {
+          "latitude": 24.5743304,
+          "longitude": 46.594474
+        },
+        {
+          "latitude": 24.5728543,
+          "longitude": 46.5953032
+        },
+        {
+          "latitude": 24.5745333,
+          "longitude": 46.6016233
+        },
+        {
+          "latitude": 24.577645,
+          "longitude": 46.6060204
+        },
+        {
+          "latitude": 24.606455,
+          "longitude": 46.6527803
+        },
+        {
+          "latitude": 24.6125667,
+          "longitude": 46.6634338
+        },
+        {
+          "latitude": 24.6137911,
+          "longitude": 46.6670131
+        },
+        {
+          "latitude": 24.6140425,
+          "longitude": 46.6714482
+        },
+        {
+          "latitude": 24.6136238,
+          "longitude": 46.6749238
+        },
+        {
+          "latitude": 24.6128539,
+          "longitude": 46.6785078
+        },
+        {
+          "latitude": 24.6133422,
+          "longitude": 46.6816267
+        },
+        {
+          "latitude": 24.6142175,
+          "longitude": 46.6845489
+        },
+        {
+          "latitude": 24.6152833,
+          "longitude": 46.6874649
+        },
+        {
+          "latitude": 24.6174702,
+          "longitude": 46.6935456
+        },
+        {
+          "latitude": 24.6187499,
+          "longitude": 46.6990946
+        },
+        {
+          "latitude": 24.6228231,
+          "longitude": 46.7059645
+        },
+        {
+          "latitude": 24.6269864,
+          "longitude": 46.7124287
+        },
+        {
+          "latitude": 24.6285653,
+          "longitude": 46.7160802
+        },
+        {
+          "latitude": 24.6286479,
+          "longitude": 46.7161949
+        },
+        {
+          "latitude": 24.6300976,
+          "longitude": 46.7185052
+        },
+        {
+          "latitude": 24.6324066,
+          "longitude": 46.7220793
+        },
+        {
+          "latitude": 24.6347977,
+          "longitude": 46.7269653
+        },
+        {
+          "latitude": 24.6398677,
+          "longitude": 46.7365138
+        },
+        {
+          "latitude": 24.6452379,
+          "longitude": 46.7394383
+        },
+        {
+          "latitude": 24.6492667,
+          "longitude": 46.7411289
+        },
+        {
+          "latitude": 24.6502521,
+          "longitude": 46.7414567
+        },
+        {
+          "latitude": 24.6510625,
+          "longitude": 46.7419699
+        },
+        {
+          "latitude": 24.6521106,
+          "longitude": 46.743255
+        },
+        {
+          "latitude": 24.6532951,
+          "longitude": 46.7443561
+        },
+        {
+          "latitude": 24.6601721,
+          "longitude": 46.744768
+        },
+        {
+          "latitude": 24.6641661,
+          "longitude": 46.7474309
+        },
+        {
+          "latitude": 24.6682993,
+          "longitude": 46.7500003
+        },
+        {
+          "latitude": 24.6708647,
+          "longitude": 46.7552503
+        },
+        {
+          "latitude": 24.6734822,
+          "longitude": 46.7611722
+        },
+        {
+          "latitude": 24.6799052,
+          "longitude": 46.7776328
+        },
+        {
+          "latitude": 24.6841322,
+          "longitude": 46.7913557
+        },
+        {
+          "latitude": 24.6858108,
+          "longitude": 46.7954031
+        },
+        {
+          "latitude": 24.6874258,
+          "longitude": 46.7988061
+        },
+        {
+          "latitude": 24.6933524,
+          "longitude": 46.8106109
+        },
+        {
+          "latitude": 24.6969025,
+          "longitude": 46.8199635
+        },
+        {
+          "latitude": 24.6998866,
+          "longitude": 46.826902
+        },
+        {
+          "latitude": 24.7193712,
+          "longitude": 46.8578805
+        },
+        {
+          "latitude": 24.7212607,
+          "longitude": 46.8588784
+        },
+        {
+          "latitude": 24.7231964,
+          "longitude": 46.8610957
+        }
+      ]
+    },
+    {
+      "id": "yellow",
+      "nameAr": "المسار الأصفر",
+      "nameEn": "Yellow Line",
+      "colorHex": "#FFD105",
+      "displayOrder": 4,
+      "shortCode": "4",
+      "stationIds": [
+        "kafd",
+        "ar_rabi",
+        "uthman_bin_affan",
+        "sabic",
+        "pnu_1",
+        "pnu_2",
+        "airport_t5",
+        "airport_t34",
+        "airport_t12"
+      ],
+      "path": [
+        {
+          "latitude": 24.7705346,
+          "longitude": 46.6425757
+        },
+        {
+          "latitude": 24.7741912,
+          "longitude": 46.6407872
+        },
+        {
+          "latitude": 24.7780653,
+          "longitude": 46.6428888
+        },
+        {
+          "latitude": 24.7858492,
+          "longitude": 46.6596995
+        },
+        {
+          "latitude": 24.8084277,
+          "longitude": 46.7140447
+        },
+        {
+          "latitude": 24.8133294,
+          "longitude": 46.7138116
+        },
+        {
+          "latitude": 24.8195692,
+          "longitude": 46.7158202
+        },
+        {
+          "latitude": 24.8264365,
+          "longitude": 46.7201889
+        },
+        {
+          "latitude": 24.8296015,
+          "longitude": 46.7232363
+        },
+        {
+          "latitude": 24.8464188,
+          "longitude": 46.7131414
+        },
+        {
+          "latitude": 24.8633844,
+          "longitude": 46.7026616
+        },
+        {
+          "latitude": 24.8733906,
+          "longitude": 46.6951477
+        },
+        {
+          "latitude": 24.8864948,
+          "longitude": 46.6950096
+        },
+        {
+          "latitude": 24.8960907,
+          "longitude": 46.698366
+        },
+        {
+          "latitude": 24.9006552,
+          "longitude": 46.7043389
+        },
+        {
+          "latitude": 24.9053262,
+          "longitude": 46.7119186
+        },
+        {
+          "latitude": 24.9090169,
+          "longitude": 46.7200528
+        },
+        {
+          "latitude": 24.9128963,
+          "longitude": 46.7231898
+        },
+        {
+          "latitude": 24.9190686,
+          "longitude": 46.7227503
+        },
+        {
+          "latitude": 24.9298434,
+          "longitude": 46.7160299
+        },
+        {
+          "latitude": 24.9463259,
+          "longitude": 46.7067078
+        },
+        {
+          "latitude": 24.986693,
+          "longitude": 46.6814451
+        }
+      ]
+    },
+    {
+      "id": "green",
+      "nameAr": "المسار الأخضر",
+      "nameEn": "Green Line",
+      "colorHex": "#43B649",
+      "displayOrder": 5,
+      "shortCode": "5",
+      "stationIds": [
+        "national_museum",
+        "ministry_of_finance",
+        "king_abdulaziz_hospital",
+        "ministry_of_defense",
+        "ministries",
+        "gosi",
+        "officers_club",
+        "abu_dhabi_square",
+        "ad_dhabab",
+        "as_sulimaniyah",
+        "king_salman_park",
+        "ministry_of_education"
+      ],
+      "path": [
+        {
+          "latitude": 24.6441082,
+          "longitude": 46.711408
+        },
+        {
+          "latitude": 24.6457964,
+          "longitude": 46.7140071
+        },
+        {
+          "latitude": 24.6470405,
+          "longitude": 46.7150558
+        },
+        {
+          "latitude": 24.6588825,
+          "longitude": 46.717695
+        },
+        {
+          "latitude": 24.6670121,
+          "longitude": 46.7181252
+        },
+        {
+          "latitude": 24.6770445,
+          "longitude": 46.7184009
+        },
+        {
+          "latitude": 24.6933693,
+          "longitude": 46.7182122
+        },
+        {
+          "latitude": 24.7049136,
+          "longitude": 46.717604
+        },
+        {
+          "latitude": 24.7070865,
+          "longitude": 46.715416
+        },
+        {
+          "latitude": 24.7095435,
+          "longitude": 46.7083516
+        },
+        {
+          "latitude": 24.7133706,
+          "longitude": 46.6990763
+        },
+        {
+          "latitude": 24.7145229,
+          "longitude": 46.6982341
+        },
+        {
+          "latitude": 24.7161985,
+          "longitude": 46.6981211
+        },
+        {
+          "latitude": 24.7186611,
+          "longitude": 46.6995911
+        },
+        {
+          "latitude": 24.7245033,
+          "longitude": 46.7033289
+        },
+        {
+          "latitude": 24.7261512,
+          "longitude": 46.7030941
+        },
+        {
+          "latitude": 24.7283864,
+          "longitude": 46.7011246
+        },
+        {
+          "latitude": 24.7296449,
+          "longitude": 46.6993751
+        },
+        {
+          "latitude": 24.7316779,
+          "longitude": 46.6974014
+        },
+        {
+          "latitude": 24.7401648,
+          "longitude": 46.6934086
+        }
+      ]
+    },
+    {
+      "id": "purple",
+      "nameAr": "المسار البنفسجي",
+      "nameEn": "Purple Line",
+      "colorHex": "#984C9D",
+      "displayOrder": 6,
+      "shortCode": "6",
+      "stationIds": [
+        "kafd",
+        "ar_rabi",
+        "uthman_bin_affan",
+        "sabic",
+        "granada",
+        "yarmouk",
+        "al_hamra",
+        "andalus",
+        "khurais",
+        "as_salam",
+        "an_naseem"
+      ],
+      "path": [
+        {
+          "latitude": 24.6995519,
+          "longitude": 46.8287162
+        },
+        {
+          "latitude": 24.723448,
+          "longitude": 46.8107662
+        },
+        {
+          "latitude": 24.7380785,
+          "longitude": 46.8000603
+        },
+        {
+          "latitude": 24.7399749,
+          "longitude": 46.8000549
+        },
+        {
+          "latitude": 24.7426162,
+          "longitude": 46.7992974
+        },
+        {
+          "latitude": 24.746853,
+          "longitude": 46.7975631
+        },
+        {
+          "latitude": 24.7584067,
+          "longitude": 46.7894483
+        },
+        {
+          "latitude": 24.7803013,
+          "longitude": 46.7740474
+        },
+        {
+          "latitude": 24.7905878,
+          "longitude": 46.7665978
+        },
+        {
+          "latitude": 24.7998291,
+          "longitude": 46.7615487
+        },
+        {
+          "latitude": 24.7869517,
+          "longitude": 46.7303251
+        },
+        {
+          "latitude": 24.7851965,
+          "longitude": 46.7262096
+        },
+        {
+          "latitude": 24.8074796,
+          "longitude": 46.7144779
+        },
+        {
+          "latitude": 24.7804496,
+          "longitude": 46.649854
+        },
+        {
+          "latitude": 24.7771645,
+          "longitude": 46.6432096
+        },
+        {
+          "latitude": 24.7740777,
+          "longitude": 46.6415816
+        },
+        {
+          "latitude": 24.7707187,
+          "longitude": 46.6426705
+        }
+      ]
+    }
+  ],
+  "stations": [
+    {
+      "id": "sabb",
+      "nameAr": "الأول",
+      "nameEn": "SAB",
+      "lineIds": [
+        "blue"
+      ],
+      "latitude": 24.8294398,
+      "longitude": 46.6184396,
+      "stationType": "elevated",
+      "facilities": [
+        "parking"
+      ],
+      "hasVerifiedExits": true,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "dr_sulaiman_al_habib",
+      "nameAr": "د.سليمان الحبيب",
+      "nameEn": "Dr Sulaiman Al Habib",
+      "lineIds": [
+        "blue"
+      ],
+      "latitude": 24.8115538,
+      "longitude": 46.6265439,
+      "stationType": "elevated",
+      "facilities": [
+        "parking"
+      ],
+      "hasVerifiedExits": true,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "kafd",
+      "nameAr": "المركز المالي",
+      "nameEn": "KAFD",
+      "lineIds": [
+        "blue",
+        "yellow",
+        "purple"
+      ],
+      "latitude": 24.7681204,
+      "longitude": 46.6436189,
+      "stationType": "interchangeHub",
+      "facilities": [
+        "parking",
+        "prayerRoom",
+        "retail",
+        "customerService"
+      ],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": true,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "al_muruj",
+      "nameAr": "المروج",
+      "nameEn": "Al Murooj",
+      "lineIds": [
+        "blue"
+      ],
+      "latitude": 24.7547461,
+      "longitude": 46.6542214,
+      "stationType": "underground",
+      "facilities": [],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "king_fahd_district",
+      "nameAr": "حي الملك فهد",
+      "nameEn": "King Fahad District",
+      "lineIds": [
+        "blue"
+      ],
+      "latitude": 24.7449144,
+      "longitude": 46.6593267,
+      "stationType": "underground",
+      "facilities": [],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "king_fahd_district_2",
+      "nameAr": "حي الملك فهد 2",
+      "nameEn": "King Fahad District 2",
+      "lineIds": [
+        "blue"
+      ],
+      "latitude": 24.7366517,
+      "longitude": 46.663387,
+      "stationType": "underground",
+      "facilities": [],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": true,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "stc",
+      "nameAr": "stc",
+      "nameEn": "stc",
+      "lineIds": [
+        "blue",
+        "red"
+      ],
+      "latitude": 24.7266777,
+      "longitude": 46.6667125,
+      "stationType": "interchangeHub",
+      "facilities": [
+        "parking",
+        "prayerRoom",
+        "retail",
+        "customerService"
+      ],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": true,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "al_wurud_2",
+      "nameAr": "الورود 2",
+      "nameEn": "Al Wurud 2",
+      "lineIds": [
+        "blue"
+      ],
+      "latitude": 24.7217274,
+      "longitude": 46.6711289,
+      "stationType": "underground",
+      "facilities": [],
+      "hasVerifiedExits": true,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "al_urubah",
+      "nameAr": "العروبة",
+      "nameEn": "Al Urubah",
+      "lineIds": [
+        "blue"
+      ],
+      "latitude": 24.7132163,
+      "longitude": 46.6753663,
+      "stationType": "underground",
+      "facilities": [],
+      "hasVerifiedExits": true,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "alinma",
+      "nameAr": "مصرف الانماء",
+      "nameEn": "Alinma Bank",
+      "lineIds": [
+        "blue"
+      ],
+      "latitude": 24.7031665,
+      "longitude": 46.6803247,
+      "stationType": "underground",
+      "facilities": [
+        "retail"
+      ],
+      "hasVerifiedExits": true,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "bank_albilad",
+      "nameAr": "بنك البلاد",
+      "nameEn": "Bank Albilad",
+      "lineIds": [
+        "blue"
+      ],
+      "latitude": 24.6965076,
+      "longitude": 46.6839263,
+      "stationType": "underground",
+      "facilities": [
+        "retail"
+      ],
+      "hasVerifiedExits": true,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "king_fahd_library",
+      "nameAr": "مكتبة الملك فهد",
+      "nameEn": "King Fahad Library",
+      "lineIds": [
+        "blue"
+      ],
+      "latitude": 24.6896902,
+      "longitude": 46.6873653,
+      "stationType": "underground",
+      "facilities": [],
+      "hasVerifiedExits": true,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "moi",
+      "nameAr": "وزارة الداخلية",
+      "nameEn": "Ministry of Interior",
+      "lineIds": [
+        "blue"
+      ],
+      "latitude": 24.6742426,
+      "longitude": 46.695048,
+      "stationType": "underground",
+      "facilities": [],
+      "hasVerifiedExits": true,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "al_murabba",
+      "nameAr": "المربع",
+      "nameEn": "Al Muorabba",
+      "lineIds": [
+        "blue"
+      ],
+      "latitude": 24.6648508,
+      "longitude": 46.7024459,
+      "stationType": "underground",
+      "facilities": [],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "jawazat",
+      "nameAr": "الجوازات",
+      "nameEn": "Passport Department",
+      "lineIds": [
+        "blue"
+      ],
+      "latitude": 24.6595605,
+      "longitude": 46.7043949,
+      "stationType": "underground",
+      "facilities": [],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "national_museum",
+      "nameAr": "المتحف الوطني",
+      "nameEn": "National Museum",
+      "lineIds": [
+        "blue",
+        "green"
+      ],
+      "latitude": 24.6460677,
+      "longitude": 46.7142224,
+      "stationType": "interchangeHub",
+      "facilities": [
+        "prayerRoom",
+        "retail",
+        "customerService"
+      ],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "al_batha",
+      "nameAr": "البطحاء",
+      "nameEn": "Al Bat'ha",
+      "lineIds": [
+        "blue"
+      ],
+      "latitude": 24.6379314,
+      "longitude": 46.7152338,
+      "stationType": "underground",
+      "facilities": [
+        "retail"
+      ],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "qasr_al_hokm",
+      "nameAr": "قصر الحكم",
+      "nameEn": "Qasr Al Hokm",
+      "lineIds": [
+        "blue",
+        "orange"
+      ],
+      "latitude": 24.6285537,
+      "longitude": 46.7160893,
+      "stationType": "interchangeHub",
+      "facilities": [
+        "prayerRoom",
+        "retail",
+        "customerService"
+      ],
+      "hasVerifiedExits": true,
+      "hasVerifiedIndoorPlaces": true,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "al_oud",
+      "nameAr": "العود",
+      "nameEn": "Al Owd",
+      "lineIds": [
+        "blue"
+      ],
+      "latitude": 24.625319,
+      "longitude": 46.7210179,
+      "stationType": "underground",
+      "facilities": [],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "skirinah",
+      "nameAr": "سكيرينة",
+      "nameEn": "Skirinah",
+      "lineIds": [
+        "blue"
+      ],
+      "latitude": 24.6175518,
+      "longitude": 46.7254068,
+      "stationType": "elevated",
+      "facilities": [],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "manfouhah",
+      "nameAr": "منفوحة",
+      "nameEn": "Manfouhah",
+      "lineIds": [
+        "blue"
+      ],
+      "latitude": 24.6104574,
+      "longitude": 46.7275174,
+      "stationType": "elevated",
+      "facilities": [],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "iman_hospital",
+      "nameAr": "مستشفى الايمان",
+      "nameEn": "Al Iman Hospital",
+      "lineIds": [
+        "blue"
+      ],
+      "latitude": 24.601008,
+      "longitude": 46.7352437,
+      "stationType": "elevated",
+      "facilities": [],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "public_transport_center",
+      "nameAr": "مركز النقل العام",
+      "nameEn": "Transportation Center",
+      "lineIds": [
+        "blue"
+      ],
+      "latitude": 24.5979869,
+      "longitude": 46.7451412,
+      "stationType": "elevated",
+      "facilities": [
+        "parking"
+      ],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "al_aziziyah",
+      "nameAr": "العزيزية",
+      "nameEn": "Al Aziziah",
+      "lineIds": [
+        "blue"
+      ],
+      "latitude": 24.5861372,
+      "longitude": 46.7611964,
+      "stationType": "elevated",
+      "facilities": [],
+      "hasVerifiedExits": true,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "ad_dar_al_baida",
+      "nameAr": "الدار البيضاء",
+      "nameEn": "Ad Dar Al Baida",
+      "lineIds": [
+        "blue"
+      ],
+      "latitude": 24.5595891,
+      "longitude": 46.7765471,
+      "stationType": "elevated",
+      "facilities": [
+        "parking"
+      ],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "king_saud_university",
+      "nameAr": "جامعة الملك سعود",
+      "nameEn": "King Saud University",
+      "lineIds": [
+        "red"
+      ],
+      "latitude": 24.7096782,
+      "longitude": 46.628711,
+      "stationType": "elevated",
+      "facilities": [
+        "parking"
+      ],
+      "hasVerifiedExits": true,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "king_salman_oasis",
+      "nameAr": "واحة الملك سلمان",
+      "nameEn": "King Salman Oasis",
+      "lineIds": [
+        "red"
+      ],
+      "latitude": 24.7166293,
+      "longitude": 46.6387772,
+      "stationType": "elevated",
+      "facilities": [],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "technology_city",
+      "nameAr": "المدينة التقنية",
+      "nameEn": "KACST",
+      "lineIds": [
+        "red"
+      ],
+      "latitude": 24.7201706,
+      "longitude": 46.6469325,
+      "stationType": "underground",
+      "facilities": [],
+      "hasVerifiedExits": true,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "takhassusi",
+      "nameAr": "التخصصي",
+      "nameEn": "At Takhassussi",
+      "lineIds": [
+        "red"
+      ],
+      "latitude": 24.7234074,
+      "longitude": 46.654649,
+      "stationType": "underground",
+      "facilities": [],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "al_wurud_1",
+      "nameAr": "الورود",
+      "nameEn": "Al Wurud",
+      "lineIds": [
+        "red"
+      ],
+      "latitude": 24.7330401,
+      "longitude": 46.6774934,
+      "stationType": "underground",
+      "facilities": [],
+      "hasVerifiedExits": true,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "king_abdulaziz_road",
+      "nameAr": "طريق الملك عبدالعزيز",
+      "nameEn": "King Abdulaziz Road",
+      "lineIds": [
+        "red"
+      ],
+      "latitude": 24.7362388,
+      "longitude": 46.6852193,
+      "stationType": "underground",
+      "facilities": [],
+      "hasVerifiedExits": true,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "ministry_of_education",
+      "nameAr": "وزاره التعليم",
+      "nameEn": "Ministry of Education",
+      "lineIds": [
+        "red",
+        "green"
+      ],
+      "latitude": 24.7398738,
+      "longitude": 46.6935324,
+      "stationType": "interchangeHub",
+      "facilities": [],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "an_nuzhah",
+      "nameAr": "النزهة",
+      "nameEn": "An Nuzhah",
+      "lineIds": [
+        "red"
+      ],
+      "latitude": 24.7478216,
+      "longitude": 46.7131136,
+      "stationType": "atGrade",
+      "facilities": [],
+      "hasVerifiedExits": true,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "riyadh_exhibition_center",
+      "nameAr": "مركز الرياض للمعارض",
+      "nameEn": "Riyadh Exhibition Center",
+      "lineIds": [
+        "red"
+      ],
+      "latitude": 24.7537848,
+      "longitude": 46.7272116,
+      "stationType": "elevated",
+      "facilities": [],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "khalid_bin_al_waleed",
+      "nameAr": "طريق خالد بن الوليد",
+      "nameEn": "Khalid Bin Alwaleed Road",
+      "lineIds": [
+        "red"
+      ],
+      "latitude": 24.767058,
+      "longitude": 46.7589742,
+      "stationType": "underground",
+      "facilities": [],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "al_hamra",
+      "nameAr": "الحمراء",
+      "nameEn": "Al Hamra",
+      "lineIds": [
+        "red",
+        "purple"
+      ],
+      "latitude": 24.7763741,
+      "longitude": 46.7766672,
+      "stationType": "interchangeHub",
+      "facilities": [],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "al_khaleej",
+      "nameAr": "الخليج",
+      "nameEn": "Al Khaleej",
+      "lineIds": [
+        "red"
+      ],
+      "latitude": 24.7814504,
+      "longitude": 46.7944711,
+      "stationType": "underground",
+      "facilities": [],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "ishbiliyah",
+      "nameAr": "اشبيليا",
+      "nameEn": "Ishbiliyah",
+      "lineIds": [
+        "red"
+      ],
+      "latitude": 24.79216,
+      "longitude": 46.8110686,
+      "stationType": "atGrade",
+      "facilities": [],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "king_fahd_sports_city",
+      "nameAr": "مدينة الملك فهد الرياضية",
+      "nameEn": "King Fahad Sport City",
+      "lineIds": [
+        "red"
+      ],
+      "latitude": 24.7924357,
+      "longitude": 46.8369944,
+      "stationType": "atGrade",
+      "facilities": [
+        "parking"
+      ],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "jeddah_road",
+      "nameAr": "طريق جده",
+      "nameEn": "Jeddah Road",
+      "lineIds": [
+        "orange"
+      ],
+      "latitude": 24.5912136,
+      "longitude": 46.5433942,
+      "stationType": "elevated",
+      "facilities": [
+        "parking"
+      ],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "tuwaiq",
+      "nameAr": "طويق",
+      "nameEn": "Tuwaiq",
+      "lineIds": [
+        "orange"
+      ],
+      "latitude": 24.5853265,
+      "longitude": 46.5619038,
+      "stationType": "elevated",
+      "facilities": [],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "ad_douh",
+      "nameAr": "الدوح",
+      "nameEn": "Ad Douh",
+      "lineIds": [
+        "orange"
+      ],
+      "latitude": 24.5829317,
+      "longitude": 46.5880697,
+      "stationType": "elevated",
+      "facilities": [],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "western",
+      "nameAr": "الغربية",
+      "nameEn": "Western Station",
+      "lineIds": [
+        "orange"
+      ],
+      "latitude": 24.582485,
+      "longitude": 46.6143854,
+      "stationType": "interchangeHub",
+      "facilities": [
+        "parking",
+        "prayerRoom",
+        "retail",
+        "customerService"
+      ],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "aisha_bint_abi_bakr",
+      "nameAr": "شارع عائشة بنت ابي بكر",
+      "nameEn": "Aishah bint Abi Bakr Street",
+      "lineIds": [
+        "orange"
+      ],
+      "latitude": 24.6005287,
+      "longitude": 46.6437491,
+      "stationType": "elevated",
+      "facilities": [],
+      "hasVerifiedExits": true,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "dhahrat_al_badiah",
+      "nameAr": "ظهره البديعة",
+      "nameEn": "Dhahrat Al Badiah",
+      "lineIds": [
+        "orange"
+      ],
+      "latitude": 24.6073754,
+      "longitude": 46.6549738,
+      "stationType": "elevated",
+      "facilities": [],
+      "hasVerifiedExits": true,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "sultanah",
+      "nameAr": "سلطانه",
+      "nameEn": "Sultanah",
+      "lineIds": [
+        "orange"
+      ],
+      "latitude": 24.614812,
+      "longitude": 46.686104,
+      "stationType": "elevated",
+      "facilities": [],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "al_juradiyah",
+      "nameAr": "الجرادية",
+      "nameEn": "Al Jarradiyah",
+      "lineIds": [
+        "orange"
+      ],
+      "latitude": 24.6184574,
+      "longitude": 46.6982182,
+      "stationType": "elevated",
+      "facilities": [],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "courts_complex",
+      "nameAr": "مجمع المحاكم",
+      "nameEn": "Courts Complex",
+      "lineIds": [
+        "orange"
+      ],
+      "latitude": 24.6269659,
+      "longitude": 46.7124207,
+      "stationType": "underground",
+      "facilities": [],
+      "hasVerifiedExits": true,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "al_halah",
+      "nameAr": "الحلة",
+      "nameEn": "Al Hilla",
+      "lineIds": [
+        "orange"
+      ],
+      "latitude": 24.6317497,
+      "longitude": 46.7209205,
+      "stationType": "underground",
+      "facilities": [],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "al_marqab",
+      "nameAr": "المرقب",
+      "nameEn": "Al Margab",
+      "lineIds": [
+        "orange"
+      ],
+      "latitude": 24.6340277,
+      "longitude": 46.7254437,
+      "stationType": "underground",
+      "facilities": [],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "as_salhiyah",
+      "nameAr": "الصالحية",
+      "nameEn": "As Salhiyah",
+      "lineIds": [
+        "orange"
+      ],
+      "latitude": 24.6372286,
+      "longitude": 46.7319291,
+      "stationType": "underground",
+      "facilities": [],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "first_industrial_city",
+      "nameAr": "المدينة الصناعية الأولى",
+      "nameEn": "First Industrial City",
+      "lineIds": [
+        "orange"
+      ],
+      "latitude": 24.6451821,
+      "longitude": 46.7394928,
+      "stationType": "underground",
+      "facilities": [],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "railway",
+      "nameAr": "سكة الحديد",
+      "nameEn": "Railway",
+      "lineIds": [
+        "orange"
+      ],
+      "latitude": 24.6492334,
+      "longitude": 46.7412433,
+      "stationType": "underground",
+      "facilities": [],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "al_malaz",
+      "nameAr": "الملز",
+      "nameEn": "Al Malaz",
+      "lineIds": [
+        "orange"
+      ],
+      "latitude": 24.6610943,
+      "longitude": 46.7450541,
+      "stationType": "underground",
+      "facilities": [],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "jarir_district",
+      "nameAr": "حي جرير",
+      "nameEn": "Jarir District",
+      "lineIds": [
+        "orange"
+      ],
+      "latitude": 24.6729704,
+      "longitude": 46.7605206,
+      "stationType": "elevated",
+      "facilities": [],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "al_rajhi_grand_mosque",
+      "nameAr": "جامع الراجحي",
+      "nameEn": "Al Rajhi Grand Mosque",
+      "lineIds": [
+        "orange"
+      ],
+      "latitude": 24.6797116,
+      "longitude": 46.7784974,
+      "stationType": "elevated",
+      "facilities": [],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "harun_al_rashid",
+      "nameAr": "طريق هارون الرشيد",
+      "nameEn": "Harun Ar Rashid Road",
+      "lineIds": [
+        "orange"
+      ],
+      "latitude": 24.686085,
+      "longitude": 46.7960171,
+      "stationType": "underground",
+      "facilities": [],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "an_naseem",
+      "nameAr": "النسيم",
+      "nameEn": "An Naseem",
+      "lineIds": [
+        "orange",
+        "purple"
+      ],
+      "latitude": 24.7003744,
+      "longitude": 46.8278884,
+      "stationType": "interchangeHub",
+      "facilities": [],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "hassan_bin_thabit",
+      "nameAr": "شارع حسان بن ثابت",
+      "nameEn": "Hassan Bin Thabit street",
+      "lineIds": [
+        "orange"
+      ],
+      "latitude": 24.7131531,
+      "longitude": 46.8481091,
+      "stationType": "underground",
+      "facilities": [],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "khashm_al_an",
+      "nameAr": "خشم العان",
+      "nameEn": "Khashm Al An",
+      "lineIds": [
+        "orange"
+      ],
+      "latitude": 24.7215658,
+      "longitude": 46.8603265,
+      "stationType": "underground",
+      "facilities": [
+        "parking"
+      ],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "ar_rabi",
+      "nameAr": "الربيع",
+      "nameEn": "Ar Rabi",
+      "lineIds": [
+        "yellow",
+        "purple"
+      ],
+      "latitude": 24.7862916,
+      "longitude": 46.6605792,
+      "stationType": "interchangeHub",
+      "facilities": [],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "uthman_bin_affan",
+      "nameAr": "طريق عثمان بن عفان",
+      "nameEn": "Uthman Bin Affan Road",
+      "lineIds": [
+        "yellow",
+        "purple"
+      ],
+      "latitude": 24.8005029,
+      "longitude": 46.696349,
+      "stationType": "interchangeHub",
+      "facilities": [],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "sabic",
+      "nameAr": "سابك",
+      "nameEn": "SABIC",
+      "lineIds": [
+        "yellow",
+        "purple"
+      ],
+      "latitude": 24.8072961,
+      "longitude": 46.7096735,
+      "stationType": "interchangeHub",
+      "facilities": [],
+      "hasVerifiedExits": true,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "pnu_1",
+      "nameAr": "جامعة الأميرة نورة 1",
+      "nameEn": "PNU1",
+      "lineIds": [
+        "yellow"
+      ],
+      "latitude": 24.8403966,
+      "longitude": 46.7166824,
+      "stationType": "elevated",
+      "facilities": [],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "pnu_2",
+      "nameAr": "جامعة الأميرة نورة 2",
+      "nameEn": "PNU2",
+      "lineIds": [
+        "yellow"
+      ],
+      "latitude": 24.8598342,
+      "longitude": 46.7043171,
+      "stationType": "elevated",
+      "facilities": [],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "airport_t5",
+      "nameAr": "الصالة 5",
+      "nameEn": "Airport T5",
+      "lineIds": [
+        "yellow"
+      ],
+      "latitude": 24.9429545,
+      "longitude": 46.7082637,
+      "stationType": "elevated",
+      "facilities": [
+        "parking"
+      ],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "airport_t34",
+      "nameAr": "الصالة 3-4",
+      "nameEn": "Airport T3-4",
+      "lineIds": [
+        "yellow"
+      ],
+      "latitude": 24.9562986,
+      "longitude": 46.7032208,
+      "stationType": "elevated",
+      "facilities": [
+        "parking"
+      ],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "airport_t12",
+      "nameAr": "الصالة 1-2",
+      "nameEn": "Airport T1-2",
+      "lineIds": [
+        "yellow"
+      ],
+      "latitude": 24.9628154,
+      "longitude": 46.7000285,
+      "stationType": "elevated",
+      "facilities": [
+        "parking"
+      ],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "king_salman_park",
+      "nameAr": "حديقة الملك سلمان",
+      "nameEn": "King Salman Park",
+      "lineIds": [
+        "green"
+      ],
+      "latitude": 24.7283381,
+      "longitude": 46.7010605,
+      "stationType": "underground",
+      "facilities": [],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "as_sulimaniyah",
+      "nameAr": "السليمانية",
+      "nameEn": "As Sulimaniyah",
+      "lineIds": [
+        "green"
+      ],
+      "latitude": 24.7130432,
+      "longitude": 46.6995439,
+      "stationType": "underground",
+      "facilities": [],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "ad_dhabab",
+      "nameAr": "الضباب",
+      "nameEn": "Ad Dhabab",
+      "lineIds": [
+        "green"
+      ],
+      "latitude": 24.7091586,
+      "longitude": 46.7083571,
+      "stationType": "underground",
+      "facilities": [],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "abu_dhabi_square",
+      "nameAr": "ميدان أبو ظبي",
+      "nameEn": "Abu Dhabi square",
+      "lineIds": [
+        "green"
+      ],
+      "latitude": 24.7061161,
+      "longitude": 46.7163423,
+      "stationType": "underground",
+      "facilities": [],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "officers_club",
+      "nameAr": "نادي الضباط",
+      "nameEn": "Officers Club",
+      "lineIds": [
+        "green"
+      ],
+      "latitude": 24.6975228,
+      "longitude": 46.718029,
+      "stationType": "underground",
+      "facilities": [],
+      "hasVerifiedExits": true,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "gosi",
+      "nameAr": "التأمينات الاجتماعية",
+      "nameEn": "GOSI",
+      "lineIds": [
+        "green"
+      ],
+      "latitude": 24.6866923,
+      "longitude": 46.7181992,
+      "stationType": "underground",
+      "facilities": [],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "ministries",
+      "nameAr": "الوزارات",
+      "nameEn": "Al Wizarat",
+      "lineIds": [
+        "green"
+      ],
+      "latitude": 24.6772166,
+      "longitude": 46.7183582,
+      "stationType": "underground",
+      "facilities": [],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "ministry_of_defense",
+      "nameAr": "وزارة الدفاع",
+      "nameEn": "Ministry of Defense",
+      "lineIds": [
+        "green"
+      ],
+      "latitude": 24.6671251,
+      "longitude": 46.7182568,
+      "stationType": "underground",
+      "facilities": [],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "king_abdulaziz_hospital",
+      "nameAr": "مستشفى الملك عبدالعزيز",
+      "nameEn": "King Abdulaziz Hospital",
+      "lineIds": [
+        "green"
+      ],
+      "latitude": 24.6590459,
+      "longitude": 46.7172737,
+      "stationType": "underground",
+      "facilities": [],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "ministry_of_finance",
+      "nameAr": "وزارة المالية",
+      "nameEn": "Ministry of Finance",
+      "lineIds": [
+        "green"
+      ],
+      "latitude": 24.6512791,
+      "longitude": 46.7157306,
+      "stationType": "underground",
+      "facilities": [],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "granada",
+      "nameAr": "غرناطيّة",
+      "nameEn": "Granadia",
+      "lineIds": [
+        "purple"
+      ],
+      "latitude": 24.7864833,
+      "longitude": 46.729333,
+      "stationType": "elevated",
+      "facilities": [],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "yarmouk",
+      "nameAr": "اليرموك",
+      "nameEn": "Al Yarmuk",
+      "lineIds": [
+        "purple"
+      ],
+      "latitude": 24.7910272,
+      "longitude": 46.7664223,
+      "stationType": "elevated",
+      "facilities": [],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "andalus",
+      "nameAr": "الأندلس",
+      "nameEn": "Al Andalus",
+      "lineIds": [
+        "purple"
+      ],
+      "latitude": 24.7567469,
+      "longitude": 46.7905099,
+      "stationType": "elevated",
+      "facilities": [],
+      "hasVerifiedExits": true,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "khurais",
+      "nameAr": "طريق خريص",
+      "nameEn": "Khurais Road",
+      "lineIds": [
+        "purple"
+      ],
+      "latitude": 24.7380843,
+      "longitude": 46.8000965,
+      "stationType": "elevated",
+      "facilities": [],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    },
+    {
+      "id": "as_salam",
+      "nameAr": "السلام",
+      "nameEn": "As Salam",
+      "lineIds": [
+        "purple"
+      ],
+      "latitude": 24.7221971,
+      "longitude": 46.8114456,
+      "stationType": "elevated",
+      "facilities": [],
+      "hasVerifiedExits": false,
+      "hasVerifiedIndoorPlaces": false,
+      "heroImageURL": null,
+      "coordinateSource": "official",
+      "updatedAt": "2026-10-02T00:00:00Z"
+    }
+  ],
+  "exits": [
+    {
+      "id": "al_aziziyah-exit-2",
+      "stationId": "al_aziziyah",
+      "exitNumber": "2",
+      "nameAr": "مخرج 2",
+      "nameEn": "Exit 2",
+      "latitude": 24.5863572,
+      "longitude": 46.7614164,
+      "directionAr": "شارع الشباب (شمال شرق)",
+      "directionEn": "Al Shabab Street (NE)",
+      "nearbyLandmarkAr": "كوفي أركان",
+      "nearbyLandmarkEn": "Arkan Cafe",
+      "accessibilityType": "unknown",
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-09-16T00:00:00Z",
+      "verifiedBy": "tiktok-plate"
+    },
+    {
+      "id": "al_aziziyah-exit-3",
+      "stationId": "al_aziziyah",
+      "exitNumber": "3",
+      "nameAr": "مخرج 3",
+      "nameEn": "Exit 3",
+      "latitude": 24.5863572,
+      "longitude": 46.7609764,
+      "directionAr": "مطعم يمين الباب (كابشن سند)",
+      "directionEn": "Restaurant to the right (Sanad caption)",
+      "nearbyLandmarkAr": "باب المحطة",
+      "nearbyLandmarkEn": "Station door",
+      "accessibilityType": "unknown",
+      "verificationStatus": "pending",
+      "verifiedAt": null,
+      "verifiedBy": "field-notes"
+    },
+    {
+      "id": "king_fahd_district_2-exit-1",
+      "stationId": "king_fahd_district_2",
+      "exitNumber": "1",
+      "nameAr": "مخرج 1",
+      "nameEn": "Exit 1",
+      "latitude": 24.7368717,
+      "longitude": 46.663387,
+      "directionAr": "تعبر تقاطع الشارع إلى درج كهربائي",
+      "directionEn": "Cross the intersection to an escalator",
+      "nearbyLandmarkAr": "درج كهربائي",
+      "nearbyLandmarkEn": "Escalator",
+      "accessibilityType": "stepFree",
+      "verificationStatus": "pending",
+      "verifiedAt": null,
+      "verifiedBy": "field-notes"
+    },
+    {
+      "id": "king_fahd_district_2-exit-2",
+      "stationId": "king_fahd_district_2",
+      "exitNumber": "2",
+      "nameAr": "مخرج 2",
+      "nameEn": "Exit 2",
+      "latitude": 24.7364317,
+      "longitude": 46.663387,
+      "directionAr": "أقرب مخرج — درج عادي مو كهربائي",
+      "directionEn": "Nearest exit — regular stairs, not an escalator",
+      "nearbyLandmarkAr": "ضفّه ومَركب",
+      "nearbyLandmarkEn": "Daffah and Markab",
+      "accessibilityType": "stairsOnly",
+      "verificationStatus": "pending",
+      "verifiedAt": null,
+      "verifiedBy": "field-notes"
+    },
+    {
+      "id": "king_fahd_library-exit-5",
+      "stationId": "king_fahd_library",
+      "exitNumber": "5",
+      "nameAr": "مخرج 5",
+      "nameEn": "Exit 5",
+      "latitude": 24.6896902,
+      "longitude": 46.6875853,
+      "directionAr": "برج ومول الفيصلية",
+      "directionEn": "Al Faisaliah Tower and Mall",
+      "nearbyLandmarkAr": "الفيصلية",
+      "nearbyLandmarkEn": "Al Faisaliah",
+      "accessibilityType": "unknown",
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-09-16T00:00:00Z",
+      "verifiedBy": "tiktok-plate"
+    },
+    {
+      "id": "bank_albilad-exit-3",
+      "stationId": "bank_albilad",
+      "exitNumber": "3",
+      "nameAr": "مخرج 3",
+      "nameEn": "Exit 3",
+      "latitude": 24.6965076,
+      "longitude": 46.6841463,
+      "directionAr": "طريق الأمير محمد بن عبدالعزيز (شرق)",
+      "directionEn": "Prince Mohammed Bin Abdulaziz Rd (East)",
+      "nearbyLandmarkAr": "كرمز",
+      "nearbyLandmarkEn": "Kermez",
+      "accessibilityType": "unknown",
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-09-16T00:00:00Z",
+      "verifiedBy": "tiktok-plate"
+    },
+    {
+      "id": "sabb-exit-1",
+      "stationId": "sabb",
+      "exitNumber": "1",
+      "nameAr": "مخرج 1",
+      "nameEn": "Exit 1",
+      "latitude": 24.8296598,
+      "longitude": 46.6184396,
+      "directionAr": "طريق العليا (شمال)",
+      "directionEn": "Olaya Street (North)",
+      "nearbyLandmarkAr": "درايد",
+      "nearbyLandmarkEn": "Dried",
+      "accessibilityType": "unknown",
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-09-16T00:00:00Z",
+      "verifiedBy": "tiktok-plate"
+    },
+    {
+      "id": "alinma-exit-3",
+      "stationId": "alinma",
+      "exitNumber": "3",
+      "nameAr": "مخرج 3",
+      "nameEn": "Exit 3",
+      "latitude": 24.7029465,
+      "longitude": 46.6805447,
+      "directionAr": "شارع العليا (جنوب شرق)",
+      "directionEn": "Olaya Street (SE)",
+      "nearbyLandmarkAr": "جراوند",
+      "nearbyLandmarkEn": "Ground Cafe",
+      "accessibilityType": "unknown",
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-09-16T00:00:00Z",
+      "verifiedBy": "tiktok-plate"
+    },
+    {
+      "id": "al_urubah-exit-3",
+      "stationId": "al_urubah",
+      "exitNumber": "3",
+      "nameAr": "مخرج 3",
+      "nameEn": "Exit 3",
+      "latitude": 24.7129963,
+      "longitude": 46.6755863,
+      "directionAr": "شارع العليا (جنوب شرق)",
+      "directionEn": "Olaya Street (SE)",
+      "nearbyLandmarkAr": "تكا وي",
+      "nearbyLandmarkEn": "Tikkaway",
+      "accessibilityType": "unknown",
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-09-16T00:00:00Z",
+      "verifiedBy": "tiktok-plate"
+    },
+    {
+      "id": "al_urubah-exit-5",
+      "stationId": "al_urubah",
+      "exitNumber": "5",
+      "nameAr": "مخرج 5",
+      "nameEn": "Exit 5",
+      "latitude": 24.7134363,
+      "longitude": 46.6751463,
+      "directionAr": "مركز المملكة / المملكة مول",
+      "directionEn": "Kingdom Centre / Kingdom Mall",
+      "nearbyLandmarkAr": "المملكة مول",
+      "nearbyLandmarkEn": "Kingdom Mall",
+      "accessibilityType": "unknown",
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-09-16T00:00:00Z",
+      "verifiedBy": "tiktok-plate"
+    },
+    {
+      "id": "kafd-exit-3",
+      "stationId": "kafd",
+      "exitNumber": "3",
+      "nameAr": "مخرج 3",
+      "nameEn": "Exit 3",
+      "latitude": 24.7683404,
+      "longitude": 46.6436189,
+      "directionAr": "مشي 3 دقايق للوجهة",
+      "directionEn": "3-minute walk to the destination",
+      "nearbyLandmarkAr": "وادي كافد",
+      "nearbyLandmarkEn": "KAFD Valley",
+      "accessibilityType": "unknown",
+      "verificationStatus": "pending",
+      "verifiedAt": null,
+      "verifiedBy": "field-notes"
+    },
+    {
+      "id": "dr_sulaiman_al_habib-exit-4",
+      "stationId": "dr_sulaiman_al_habib",
+      "exitNumber": "4",
+      "nameAr": "مخرج 4",
+      "nameEn": "Exit 4",
+      "latitude": 24.8113338,
+      "longitude": 46.6263239,
+      "directionAr": "شارع العليا (جنوب غرب) — سولتير مول",
+      "directionEn": "Olaya Street (SW) — Solitaire Mall",
+      "nearbyLandmarkAr": "سولتير مول",
+      "nearbyLandmarkEn": "Solitaire Mall",
+      "accessibilityType": "unknown",
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-09-16T00:00:00Z",
+      "verifiedBy": "tiktok-plate"
+    },
+    {
+      "id": "stc-exit-2",
+      "stationId": "stc",
+      "exitNumber": "2",
+      "nameAr": "مخرج 2",
+      "nameEn": "Exit 2",
+      "latitude": 24.7266777,
+      "longitude": 46.6669325,
+      "directionAr": "مشي 3 دقايق للوجهة",
+      "directionEn": "3-minute walk to the destination",
+      "nearbyLandmarkAr": "واحة نجد",
+      "nearbyLandmarkEn": "Najd Oasis Walk",
+      "accessibilityType": "unknown",
+      "verificationStatus": "pending",
+      "verifiedAt": null,
+      "verifiedBy": "field-notes"
+    },
+    {
+      "id": "qasr_al_hokm-exit-باب",
+      "stationId": "qasr_al_hokm",
+      "exitNumber": "باب",
+      "nameAr": "مخرج باب",
+      "nameEn": "Exit باب",
+      "latitude": 24.6285537,
+      "longitude": 46.7163093,
+      "directionAr": "سهم يمين مع أيقونات سيارة",
+      "directionEn": "Right arrow with car icons",
+      "nearbyLandmarkAr": "مخرج واحد فقط",
+      "nearbyLandmarkEn": "Single door exit",
+      "accessibilityType": "unknown",
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-09-16T00:00:00Z",
+      "verifiedBy": "tiktok-plate"
+    },
+    {
+      "id": "courts_complex-exit-1",
+      "stationId": "courts_complex",
+      "exitNumber": "1",
+      "nameAr": "مخرج 1",
+      "nameEn": "Exit 1",
+      "latitude": 24.6269659,
+      "longitude": 46.7122007,
+      "directionAr": "سوق الزل (سهم يسار)",
+      "directionEn": "Al Zal Market (left arrow)",
+      "nearbyLandmarkAr": "سوق الزل",
+      "nearbyLandmarkEn": "Al Zal Market",
+      "accessibilityType": "unknown",
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-09-16T00:00:00Z",
+      "verifiedBy": "tiktok-plate"
+    },
+    {
+      "id": "al_muruj-exit-3",
+      "stationId": "al_muruj",
+      "exitNumber": "3",
+      "nameAr": "مخرج 3",
+      "nameEn": "Exit 3",
+      "latitude": 24.7549661,
+      "longitude": 46.6542214,
+      "directionAr": "مخابز ديا وعنوان القهوة",
+      "directionEn": "Dia Bakery and Unwan al Qahwa",
+      "nearbyLandmarkAr": "ديا",
+      "nearbyLandmarkEn": "Dia",
+      "accessibilityType": "unknown",
+      "verificationStatus": "pending",
+      "verifiedAt": null,
+      "verifiedBy": "field-notes"
+    },
+    {
+      "id": "moi-exit-2",
+      "stationId": "moi",
+      "exitNumber": "2",
+      "nameAr": "مخرج 2",
+      "nameEn": "Exit 2",
+      "latitude": 24.6742426,
+      "longitude": 46.695268,
+      "directionAr": "شارع عبدالملك بن مروان (شرق)",
+      "directionEn": "Abdulmalik Bin Marwan Street (East)",
+      "nearbyLandmarkAr": "كوفي كولد",
+      "nearbyLandmarkEn": "Cold Cafe",
+      "accessibilityType": "unknown",
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-09-16T00:00:00Z",
+      "verifiedBy": "tiktok-plate"
+    },
+    {
+      "id": "al_wurud_2-exit-3",
+      "stationId": "al_wurud_2",
+      "exitNumber": "3",
+      "nameAr": "مخرج 3",
+      "nameEn": "Exit 3",
+      "latitude": 24.7217274,
+      "longitude": 46.6713489,
+      "directionAr": "شارع الأمير سلطان بن سلمان (شرق)",
+      "directionEn": "Prince Sultan Bin Salman Street (East)",
+      "nearbyLandmarkAr": "كوفي سكيل",
+      "nearbyLandmarkEn": "Skill Cafe",
+      "accessibilityType": "unknown",
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-09-16T00:00:00Z",
+      "verifiedBy": "tiktok-plate"
+    },
+    {
+      "id": "aisha_bint_abi_bakr-exit-2",
+      "stationId": "aisha_bint_abi_bakr",
+      "exitNumber": "2",
+      "nameAr": "مخرج 2",
+      "nameEn": "Exit 2",
+      "latitude": 24.6005287,
+      "longitude": 46.6435291,
+      "directionAr": "حي ظهرة البديعة (غرب)",
+      "directionEn": "Dharat Al Badi'ah District (W)",
+      "nearbyLandmarkAr": "فوجي",
+      "nearbyLandmarkEn": "Fuji Cafe",
+      "accessibilityType": "unknown",
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-09-16T00:00:00Z",
+      "verifiedBy": "tiktok-plate"
+    },
+    {
+      "id": "dhahrat_al_badiah-exit-1",
+      "stationId": "dhahrat_al_badiah",
+      "exitNumber": "1",
+      "nameAr": "مخرج 1",
+      "nameEn": "Exit 1",
+      "latitude": 24.6073754,
+      "longitude": 46.6547538,
+      "directionAr": "البديعة مول (غرب)",
+      "directionEn": "Al Badi'ah Mall (W)",
+      "nearbyLandmarkAr": "كوفي NC",
+      "nearbyLandmarkEn": "NC Cafe",
+      "accessibilityType": "unknown",
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-09-16T00:00:00Z",
+      "verifiedBy": "tiktok-plate"
+    },
+    {
+      "id": "hassan_bin_thabit-exit-1",
+      "stationId": "hassan_bin_thabit",
+      "exitNumber": "1",
+      "nameAr": "مخرج 1",
+      "nameEn": "Exit 1",
+      "latitude": 24.7133731,
+      "longitude": 46.8481091,
+      "directionAr": "محلات سيارات ودان كافيه",
+      "directionEn": "Car shops and Dan Cafe",
+      "nearbyLandmarkAr": "دان كافيه",
+      "nearbyLandmarkEn": "Dan Cafe",
+      "accessibilityType": "unknown",
+      "verificationStatus": "pending",
+      "verifiedAt": null,
+      "verifiedBy": "field-notes"
+    },
+    {
+      "id": "hassan_bin_thabit-exit-2",
+      "stationId": "hassan_bin_thabit",
+      "exitNumber": "2",
+      "nameAr": "مخرج 2",
+      "nameEn": "Exit 2",
+      "latitude": 24.7129331,
+      "longitude": 46.8483291,
+      "directionAr": "مستشفى الجزيرة والهرم بلازا",
+      "directionEn": "Al Jazeera Hospital and Al Haram Plaza",
+      "nearbyLandmarkAr": "صاحب التوفير وبنده وهيرفي",
+      "nearbyLandmarkEn": "Sahib Al Tawfeer, Panda, Harvey's",
+      "accessibilityType": "unknown",
+      "verificationStatus": "pending",
+      "verifiedAt": null,
+      "verifiedBy": "field-notes"
+    },
+    {
+      "id": "an_naseem-exit-1",
+      "stationId": "an_naseem",
+      "exitNumber": "1",
+      "nameAr": "مخرج 1",
+      "nameEn": "Exit 1",
+      "latitude": 24.7005944,
+      "longitude": 46.8278884,
+      "directionAr": "مشي 5 دقايق",
+      "directionEn": "5-minute walk",
+      "nearbyLandmarkAr": "سولارا",
+      "nearbyLandmarkEn": "Solara",
+      "accessibilityType": "unknown",
+      "verificationStatus": "pending",
+      "verifiedAt": null,
+      "verifiedBy": "field-notes"
+    },
+    {
+      "id": "harun_al_rashid-exit-باب-أ",
+      "stationId": "harun_al_rashid",
+      "exitNumber": "باب-أ",
+      "nameAr": "مخرج باب-أ",
+      "nameEn": "Exit باب-أ",
+      "latitude": 24.686305,
+      "longitude": 46.7960171,
+      "directionAr": "بوابة أولى — قطعة شارع بينها وبين الثانية",
+      "directionEn": "First gate — a street segment between the two gates",
+      "nearbyLandmarkAr": "الروابي بلازا",
+      "nearbyLandmarkEn": "Al Rawabi Plaza",
+      "accessibilityType": "unknown",
+      "verificationStatus": "pending",
+      "verifiedAt": null,
+      "verifiedBy": "field-notes"
+    },
+    {
+      "id": "harun_al_rashid-exit-باب-ب",
+      "stationId": "harun_al_rashid",
+      "exitNumber": "باب-ب",
+      "nameAr": "مخرج باب-ب",
+      "nameEn": "Exit باب-ب",
+      "latitude": 24.685865,
+      "longitude": 46.7960171,
+      "directionAr": "بوابة ثانية — قطعة شارع بينها وبين الأولى",
+      "directionEn": "Second gate — a street segment between the two gates",
+      "nearbyLandmarkAr": "الروابي بلازا",
+      "nearbyLandmarkEn": "Al Rawabi Plaza",
+      "accessibilityType": "unknown",
+      "verificationStatus": "pending",
+      "verifiedAt": null,
+      "verifiedBy": "field-notes"
+    },
+    {
+      "id": "al_rajhi_grand_mosque-exit-1",
+      "stationId": "al_rajhi_grand_mosque",
+      "exitNumber": "1",
+      "nameAr": "مخرج 1",
+      "nameEn": "Exit 1",
+      "latitude": 24.6797116,
+      "longitude": 46.7787174,
+      "directionAr": "أسواق المجد والعثيم مول",
+      "directionEn": "Al Majd markets and Othaim Mall",
+      "nearbyLandmarkAr": "افتتاح المخرج",
+      "nearbyLandmarkEn": "Exit opening",
+      "accessibilityType": "unknown",
+      "verificationStatus": "pending",
+      "verifiedAt": null,
+      "verifiedBy": "field-notes"
+    },
+    {
+      "id": "jarir_district-exit-1",
+      "stationId": "jarir_district",
+      "exitNumber": "1",
+      "nameAr": "مخرج 1",
+      "nameEn": "Exit 1",
+      "latitude": 24.6731904,
+      "longitude": 46.7605206,
+      "directionAr": "تلفّ ورا إلى حديقة النهضة",
+      "directionEn": "Go around behind to Al Nahda Park",
+      "nearbyLandmarkAr": "حديقة النهضة",
+      "nearbyLandmarkEn": "Al Nahda Park",
+      "accessibilityType": "unknown",
+      "verificationStatus": "pending",
+      "verifiedAt": null,
+      "verifiedBy": "field-notes"
+    },
+    {
+      "id": "jarir_district-exit-2",
+      "stationId": "jarir_district",
+      "exitNumber": "2",
+      "nameAr": "مخرج 2",
+      "nameEn": "Exit 2",
+      "latitude": 24.6729704,
+      "longitude": 46.7607406,
+      "directionAr": "قطعة شارع ومشي 5 دقايق",
+      "directionEn": "Street segment and a 5-minute walk",
+      "nearbyLandmarkAr": "كوفي حواف",
+      "nearbyLandmarkEn": "Hawaf Cafe",
+      "accessibilityType": "unknown",
+      "verificationStatus": "pending",
+      "verifiedAt": null,
+      "verifiedBy": "field-notes"
+    },
+    {
+      "id": "jarir_district-exit-3",
+      "stationId": "jarir_district",
+      "exitNumber": "3",
+      "nameAr": "مخرج 3",
+      "nameEn": "Exit 3",
+      "latitude": 24.6727504,
+      "longitude": 46.7605206,
+      "directionAr": "مشروع سفن — لسا ما فتح",
+      "directionEn": "Safan project — not open yet",
+      "nearbyLandmarkAr": "سفن",
+      "nearbyLandmarkEn": "Safan",
+      "accessibilityType": "unknown",
+      "verificationStatus": "pending",
+      "verifiedAt": null,
+      "verifiedBy": "field-notes"
+    },
+    {
+      "id": "king_abdulaziz_road-exit-1",
+      "stationId": "king_abdulaziz_road",
+      "exitNumber": "1",
+      "nameAr": "مخرج 1",
+      "nameEn": "Exit 1",
+      "latitude": 24.7364588,
+      "longitude": 46.6852193,
+      "directionAr": "عيادة ميلان (كابشن سند)",
+      "directionEn": "Milan Clinic (Sanad caption)",
+      "nearbyLandmarkAr": "ميلان",
+      "nearbyLandmarkEn": "Milan",
+      "accessibilityType": "unknown",
+      "verificationStatus": "pending",
+      "verifiedAt": null,
+      "verifiedBy": "field-notes"
+    },
+    {
+      "id": "king_abdulaziz_road-exit-2",
+      "stationId": "king_abdulaziz_road",
+      "exitNumber": "2",
+      "nameAr": "مخرج 2",
+      "nameEn": "Exit 2",
+      "latitude": 24.7362388,
+      "longitude": 46.6854393,
+      "directionAr": "طريق الملك عبدالله (شرق)",
+      "directionEn": "King Abdullah Road (East)",
+      "nearbyLandmarkAr": "Alice Cafe",
+      "nearbyLandmarkEn": "Alice Cafe",
+      "accessibilityType": "unknown",
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-09-16T00:00:00Z",
+      "verifiedBy": "tiktok-plate"
+    },
+    {
+      "id": "king_saud_university-exit-3",
+      "stationId": "king_saud_university",
+      "exitNumber": "3",
+      "nameAr": "مخرج 3",
+      "nameEn": "Exit 3",
+      "latitude": 24.7098982,
+      "longitude": 46.628711,
+      "directionAr": "وقف جامعة الملك سعود",
+      "directionEn": "King Saud University Endowment",
+      "nearbyLandmarkAr": "بيتر بيكري",
+      "nearbyLandmarkEn": "Peter Bakery",
+      "accessibilityType": "unknown",
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-09-16T00:00:00Z",
+      "verifiedBy": "tiktok-plate"
+    },
+    {
+      "id": "technology_city-exit-1",
+      "stationId": "technology_city",
+      "exitNumber": "1",
+      "nameAr": "مخرج 1",
+      "nameEn": "Exit 1",
+      "latitude": 24.7203906,
+      "longitude": 46.6469325,
+      "directionAr": "حديقة العلوم",
+      "directionEn": "Science Park",
+      "nearbyLandmarkAr": "كوفي طَول",
+      "nearbyLandmarkEn": "Tawl Cafe",
+      "accessibilityType": "unknown",
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-09-16T00:00:00Z",
+      "verifiedBy": "tiktok-plate"
+    },
+    {
+      "id": "al_wurud_1-exit-1",
+      "stationId": "al_wurud_1",
+      "exitNumber": "1",
+      "nameAr": "مخرج 1",
+      "nameEn": "Exit 1",
+      "latitude": 24.7332601,
+      "longitude": 46.6774934,
+      "directionAr": "مشي دقيقتين لأتموسفير",
+      "directionEn": "2-minute walk to Atmosphere",
+      "nearbyLandmarkAr": "ATMOSPHERE",
+      "nearbyLandmarkEn": "Atmosphere",
+      "accessibilityType": "unknown",
+      "verificationStatus": "pending",
+      "verifiedAt": null,
+      "verifiedBy": "field-notes"
+    },
+    {
+      "id": "al_wurud_1-exit-2",
+      "stationId": "al_wurud_1",
+      "exitNumber": "2",
+      "nameAr": "مخرج 2",
+      "nameEn": "Exit 2",
+      "latitude": 24.7330401,
+      "longitude": 46.6777134,
+      "directionAr": "حي الورود",
+      "directionEn": "Al Wurud District",
+      "nearbyLandmarkAr": "خمسة التوفير",
+      "nearbyLandmarkEn": "Khamsa Al Tawfeer",
+      "accessibilityType": "unknown",
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-09-16T00:00:00Z",
+      "verifiedBy": "tiktok-plate"
+    },
+    {
+      "id": "an_nuzhah-exit-2",
+      "stationId": "an_nuzhah",
+      "exitNumber": "2",
+      "nameAr": "مخرج 2",
+      "nameEn": "Exit 2",
+      "latitude": 24.7478216,
+      "longitude": 46.7133336,
+      "directionAr": "شركة المياه الوطنية",
+      "directionEn": "National Water Company",
+      "nearbyLandmarkAr": "ريسوس",
+      "nearbyLandmarkEn": "Resos",
+      "accessibilityType": "unknown",
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-09-16T00:00:00Z",
+      "verifiedBy": "tiktok-plate"
+    },
+    {
+      "id": "ministry_of_education-exit-1",
+      "stationId": "ministry_of_education",
+      "exitNumber": "1",
+      "nameAr": "مخرج 1",
+      "nameEn": "Exit 1",
+      "latitude": 24.7400938,
+      "longitude": 46.6935324,
+      "directionAr": "ممشى الملك عبدالله",
+      "directionEn": "King Abdullah Walk",
+      "nearbyLandmarkAr": "كوفي Chic",
+      "nearbyLandmarkEn": "Chic Cafe",
+      "accessibilityType": "unknown",
+      "verificationStatus": "pending",
+      "verifiedAt": null,
+      "verifiedBy": "field-notes"
+    },
+    {
+      "id": "riyadh_exhibition_center-exit-2",
+      "stationId": "riyadh_exhibition_center",
+      "exitNumber": "2",
+      "nameAr": "مخرج 2",
+      "nameEn": "Exit 2",
+      "latitude": 24.7537848,
+      "longitude": 46.7274316,
+      "directionAr": "معرض الأقمشة",
+      "directionEn": "Fabric exhibition",
+      "nearbyLandmarkAr": "مركز المعارض",
+      "nearbyLandmarkEn": "Exhibition Center",
+      "accessibilityType": "unknown",
+      "verificationStatus": "pending",
+      "verifiedAt": null,
+      "verifiedBy": "field-notes"
+    },
+    {
+      "id": "officers_club-exit-4",
+      "stationId": "officers_club",
+      "exitNumber": "4",
+      "nameAr": "مخرج 4",
+      "nameEn": "Exit 4",
+      "latitude": 24.6977428,
+      "longitude": 46.718249,
+      "directionAr": "طريق الملك عبدالعزيز (شمال شرق)",
+      "directionEn": "King Abdulaziz Rd (NE)",
+      "nearbyLandmarkAr": "مطعم الشرفة",
+      "nearbyLandmarkEn": "Shurfa Restaurant",
+      "accessibilityType": "unknown",
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-09-16T00:00:00Z",
+      "verifiedBy": "tiktok-plate"
+    },
+    {
+      "id": "andalus-exit-3",
+      "stationId": "andalus",
+      "exitNumber": "3",
+      "nameAr": "مخرج 3",
+      "nameEn": "Exit 3",
+      "latitude": 24.7565269,
+      "longitude": 46.7902899,
+      "directionAr": "طريق عبدالرحمن الناصر (شمال غرب)",
+      "directionEn": "Abdulrahman An Nasir Rd (NW)",
+      "nearbyLandmarkAr": "مشغل اللمسة المتألقة",
+      "nearbyLandmarkEn": "Al Lamsa Al Muta'aliqa",
+      "accessibilityType": "unknown",
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-09-16T00:00:00Z",
+      "verifiedBy": "tiktok-plate"
+    },
+    {
+      "id": "sabic-exit-3",
+      "stationId": "sabic",
+      "exitNumber": "3",
+      "nameAr": "مخرج 3",
+      "nameEn": "Exit 3",
+      "latitude": 24.8070761,
+      "longitude": 46.7096735,
+      "directionAr": "طريق الأمير محمد بن سلمان (جنوب)",
+      "directionEn": "Prince Mohammed Ibn Salman Rd (S)",
+      "nearbyLandmarkAr": "كافيدا",
+      "nearbyLandmarkEn": "Cavida",
+      "accessibilityType": "unknown",
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-09-16T00:00:00Z",
+      "verifiedBy": "tiktok-plate"
+    },
+    {
+      "id": "railway-exit-1",
+      "stationId": "railway",
+      "exitNumber": "1",
+      "nameAr": "مخرج 1",
+      "nameEn": "Exit 1",
+      "latitude": 24.6494534,
+      "longitude": 46.7412433,
+      "directionAr": "بوابة القطار",
+      "directionEn": "Train gate",
+      "nearbyLandmarkAr": "سار",
+      "nearbyLandmarkEn": "SAR",
+      "accessibilityType": "unknown",
+      "verificationStatus": "pending",
+      "verifiedAt": null,
+      "verifiedBy": "field-notes"
+    }
+  ]
+}

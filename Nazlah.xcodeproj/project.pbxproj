@@ -1,0 +1,961 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		080CAC3903940CD249A5AFBB /* PlaceModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C257D9BCC6D8CBD9D8402B15 /* PlaceModels.swift */; };
+		08674B52F27F416434648C2E /* BottomNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840B6F3E31F3E44B2E8D4FB4 /* BottomNavigation.swift */; };
+		1308A3B59AC68EABF038E9FD /* StationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53D51D3B3AEF7F33BBBAB3F /* StationDetailView.swift */; };
+		149F309671DBC436CB56D784 /* MetroMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1FF5E5ECE4C4312C977888 /* MetroMapView.swift */; };
+		16D5ECFC35D3B9434E3B72D7 /* PlacesMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A1E1766836FE16B1FB6BFC /* PlacesMapView.swift */; };
+		181136A132E0F481E3D4A0AB /* AroundYouView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D613CAB8326EE64CBD0AC638 /* AroundYouView.swift */; };
+		1C87C95A84428D935FBC5399 /* VisualPrimitives.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA65563C8C52E7094B201FD /* VisualPrimitives.swift */; };
+		20DF190E65004E86C0B4D8D4 /* ServiceProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A924470D9D6E554B067802EA /* ServiceProtocols.swift */; };
+		215473866AF7230937D94008 /* AccountAndAuthViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3052EBB8C5EBFA5DF95D90 /* AccountAndAuthViews.swift */; };
+		2445C90B6BFAEF753F1220F6 /* Alexandria-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACC9657AE0434188B685F34F /* Alexandria-Bold.ttf */; };
+		288B83D12EE93CCDF0605EB4 /* AppChip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A46DD3340A66E4CDBF2B39F /* AppChip.swift */; };
+		A7C3E91F4B2D80C156E4D0A2 /* DalilAtoms.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C3E91F4B2D80C156E4D0A1 /* DalilAtoms.swift */; };
+		2DEF96B471C54280B236CE07 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 6F02810D952D7470E774A89E /* Localizable.xcstrings */; };
+		2F66460FDB99BE6D19FA06FD /* Alexandria-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 765455ACC3963C025A3E7719 /* Alexandria-Regular.ttf */; };
+		4231B50B141ED20AEE3D850C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4303F19F842082949EF8D4B /* Assets.xcassets */; };
+		483460BFB0AF1ACDD99B7CF4 /* Alexandria-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ABBA0D0D783824456D26F2C8 /* Alexandria-ExtraBold.ttf */; };
+		56F9D7EA6BD5C124421E288D /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840188F6A60F9D917CDCC0E6 /* SplashView.swift */; };
+		593AC3F44434F60135A6E890 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A486CF0F884D16CF52E77237 /* FavoritesView.swift */; };
+		5A0B8153DF46C2D64C1EE52D /* DiscoveryLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D7F9DC98D0ABDF827B6468 /* DiscoveryLogicTests.swift */; };
+		5C445B6F56D35D4E13160CF1 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 797A94150EEDC9261C92E35B /* PrivacyInfo.xcprivacy */; };
+		5CB524B8D0DA60C0E6A1D47D /* MockServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9659F039275526E010E5FF0 /* MockServices.swift */; };
+		64BC92BA4EA8B423AF96EB8F /* places.json in Resources */ = {isa = PBXBuildFile; fileRef = 89D2F0C69AE42E8C8797EB9B /* places.json */; };
+		67351A35313CF861B6ADA017 /* AppEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB4DF7C49B9085FC689CFF0 /* AppEnums.swift */; };
+		67D47A8644BEDE005AEACCEB /* NazlahUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CAF07D5AC4EC4C07028117 /* NazlahUITests.swift */; };
+		93999DE3D4B7051423C3D9CF /* GoogleRoutesClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0540D638540E96FC3657153B /* GoogleRoutesClient.swift */; };
+		9A02F0CBCCF3F5800CC08B89 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BDB1B596F024EBC982E441 /* OnboardingView.swift */; };
+		AB7C23862C021553F2BF7F5B /* LocationServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850806756009A1FC17E94CC7 /* LocationServices.swift */; };
+		AFF75968F86E1EB763B7850D /* UIComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70273544C7EA16D0123882DF /* UIComponents.swift */; };
+		B1C896C2FF1F8C1705D58030 /* NazlahApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C03CD362CB5B626A86E3C6 /* NazlahApp.swift */; };
+		B5896B3532EF8D89493B4596 /* ModeratorViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E5C3E196267D6B7543F465 /* ModeratorViews.swift */; };
+		B98716944D16578F012444AB /* MetroModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CE64F1ACA93A1B6AD100D2 /* MetroModels.swift */; };
+		C11F2557C44ACCD789561D7F /* JSONCatalogServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA8DAD2A561BD20E2768528 /* JSONCatalogServices.swift */; };
+		C90EB92DA48C6F3E217AD43A /* NazlahTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B028DD031B6E979D732646 /* NazlahTokens.swift */; };
+		D1C0D1C00000000000000001 /* DalilCopy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C0D1C00000000000000002 /* DalilCopy.swift */; };
+		CA8BED339306D29553D54636 /* metro_catalog.json in Resources */ = {isa = PBXBuildFile; fileRef = 17893C24C165421297E0812F /* metro_catalog.json */; };
+		D2D3121AAE69072EBDC5CBC2 /* AccessAndSafety.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E11B1DB21FD2301BCB351BD /* AccessAndSafety.swift */; };
+		D435B51E9556145EE75CEA60 /* DiscoveryLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C14CF408F6FEC66D85FA569 /* DiscoveryLogic.swift */; };
+		D4893B263390BA55A497D588 /* PlaceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493A96A9AC9B340A1833394D /* PlaceDetailView.swift */; };
+		D573E039CFCB8CB255F62CEF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F08162DB9BFC435B75A721 /* HomeView.swift */; };
+		DDFE8EA70483B2245E8CDC7F /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5D1F43C2A3B56D7C2C0EA2 /* AppEnvironment.swift */; };
+		E0062C99166F9E12D41DD38D /* Alexandria-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BA34928DB3B92DD1B5A2860 /* Alexandria-SemiBold.ttf */; };
+		C8A1E4D29F3B4A6E8D1C0B7A /* Changa-Variable.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3D91A7C4E2B8C6A1D5F0E9B /* Changa-Variable.ttf */; };
+		F18F30227243DC6708BB7091 /* AddPlaceFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3711CC27237CEFCF9C01728B /* AddPlaceFlowView.swift */; };
+		F5065C508CDA9F9F5279C1DD /* BrandMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D958ABD78EA1C9C083FB9E8 /* BrandMark.swift */; };
+		F579756E2D85869A8BBCD302 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D7EBDD4EA66E05B97B9351 /* RootView.swift */; };
+		F8C42A0840C8415F4AFA12D9 /* CatalogSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5009F1A16E0B506779ECD883 /* CatalogSession.swift */; };
+		FBD4522CC9B6F605A3D77476 /* Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E25DB19F9371F34DABF461 /* Cards.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		101F94D45009B648243D627A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3ACCAACE2A03DC36346DC683 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F60CEA71C029B374999B0A54;
+			remoteInfo = Nazlah;
+		};
+		DC0CE67A86A483210391EF19 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3ACCAACE2A03DC36346DC683 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F60CEA71C029B374999B0A54;
+			remoteInfo = Nazlah;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0540D638540E96FC3657153B /* GoogleRoutesClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleRoutesClient.swift; sourceTree = "<group>"; };
+		B7E41A92C03D4F8A9B12E4C1 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Secrets.xcconfig; path = Config/Secrets.xcconfig; sourceTree = SOURCE_ROOT; };
+		0C3052EBB8C5EBFA5DF95D90 /* AccountAndAuthViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountAndAuthViews.swift; sourceTree = "<group>"; };
+		0D958ABD78EA1C9C083FB9E8 /* BrandMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandMark.swift; sourceTree = "<group>"; };
+		17893C24C165421297E0812F /* metro_catalog.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = metro_catalog.json; sourceTree = "<group>"; };
+		1A1FF5E5ECE4C4312C977888 /* MetroMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroMapView.swift; sourceTree = "<group>"; };
+		1A46DD3340A66E4CDBF2B39F /* AppChip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppChip.swift; sourceTree = "<group>"; };
+		A7C3E91F4B2D80C156E4D0A1 /* DalilAtoms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DalilAtoms.swift; sourceTree = "<group>"; };
+		1BA34928DB3B92DD1B5A2860 /* Alexandria-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Alexandria-SemiBold.ttf"; sourceTree = "<group>"; };
+		F3D91A7C4E2B8C6A1D5F0E9B /* Changa-Variable.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Changa-Variable.ttf"; sourceTree = "<group>"; };
+		2E11B1DB21FD2301BCB351BD /* AccessAndSafety.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessAndSafety.swift; sourceTree = "<group>"; };
+		3671BCDBA2025B597D0B1406 /* NazlahTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = NazlahTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3711CC27237CEFCF9C01728B /* AddPlaceFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlaceFlowView.swift; sourceTree = "<group>"; };
+		42D96401B11DBF8A2BE2694B /* NazlahUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = NazlahUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		45E5C3E196267D6B7543F465 /* ModeratorViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeratorViews.swift; sourceTree = "<group>"; };
+		493A96A9AC9B340A1833394D /* PlaceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailView.swift; sourceTree = "<group>"; };
+		4DA65563C8C52E7094B201FD /* VisualPrimitives.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualPrimitives.swift; sourceTree = "<group>"; };
+		5009F1A16E0B506779ECD883 /* CatalogSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogSession.swift; sourceTree = "<group>"; };
+		51AC3E271B5D8F3F23C913A4 /* Nazlah.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Nazlah.entitlements; sourceTree = "<group>"; };
+		673975CF992220B75FC93D49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		69B028DD031B6E979D732646 /* NazlahTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NazlahTokens.swift; sourceTree = "<group>"; };
+		D1C0D1C00000000000000002 /* DalilCopy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DalilCopy.swift; sourceTree = "<group>"; };
+		6C14CF408F6FEC66D85FA569 /* DiscoveryLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryLogic.swift; sourceTree = "<group>"; };
+		6DB4DF7C49B9085FC689CFF0 /* AppEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnums.swift; sourceTree = "<group>"; };
+		6F02810D952D7470E774A89E /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		70273544C7EA16D0123882DF /* UIComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIComponents.swift; sourceTree = "<group>"; };
+		71D7EBDD4EA66E05B97B9351 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		75F08162DB9BFC435B75A721 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		765455ACC3963C025A3E7719 /* Alexandria-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Alexandria-Regular.ttf"; sourceTree = "<group>"; };
+		797A94150EEDC9261C92E35B /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		80CE64F1ACA93A1B6AD100D2 /* MetroModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroModels.swift; sourceTree = "<group>"; };
+		83AA35E2CFF0D438BD680650 /* Nazlah.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Nazlah.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		840188F6A60F9D917CDCC0E6 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		840B6F3E31F3E44B2E8D4FB4 /* BottomNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomNavigation.swift; sourceTree = "<group>"; };
+		850806756009A1FC17E94CC7 /* LocationServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServices.swift; sourceTree = "<group>"; };
+		85E25DB19F9371F34DABF461 /* Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cards.swift; sourceTree = "<group>"; };
+		89D2F0C69AE42E8C8797EB9B /* places.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = places.json; sourceTree = "<group>"; };
+		A486CF0F884D16CF52E77237 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		A924470D9D6E554B067802EA /* ServiceProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocols.swift; sourceTree = "<group>"; };
+		ABBA0D0D783824456D26F2C8 /* Alexandria-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Alexandria-ExtraBold.ttf"; sourceTree = "<group>"; };
+		AC5D1F43C2A3B56D7C2C0EA2 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		ACC9657AE0434188B685F34F /* Alexandria-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Alexandria-Bold.ttf"; sourceTree = "<group>"; };
+		C257D9BCC6D8CBD9D8402B15 /* PlaceModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModels.swift; sourceTree = "<group>"; };
+		C9659F039275526E010E5FF0 /* MockServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServices.swift; sourceTree = "<group>"; };
+		D613CAB8326EE64CBD0AC638 /* AroundYouView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AroundYouView.swift; sourceTree = "<group>"; };
+		DDA8DAD2A561BD20E2768528 /* JSONCatalogServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONCatalogServices.swift; sourceTree = "<group>"; };
+		E53D51D3B3AEF7F33BBBAB3F /* StationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDetailView.swift; sourceTree = "<group>"; };
+		E6CAF07D5AC4EC4C07028117 /* NazlahUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NazlahUITests.swift; sourceTree = "<group>"; };
+		E7A1E1766836FE16B1FB6BFC /* PlacesMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesMapView.swift; sourceTree = "<group>"; };
+		F0BDB1B596F024EBC982E441 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		F2C03CD362CB5B626A86E3C6 /* NazlahApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NazlahApp.swift; sourceTree = "<group>"; };
+		F4303F19F842082949EF8D4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F5D7F9DC98D0ABDF827B6468 /* DiscoveryLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryLogicTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		066ECF677654D2C038A1C9D3 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				1A46DD3340A66E4CDBF2B39F /* AppChip.swift */,
+				A7C3E91F4B2D80C156E4D0A1 /* DalilAtoms.swift */,
+				840B6F3E31F3E44B2E8D4FB4 /* BottomNavigation.swift */,
+				0D958ABD78EA1C9C083FB9E8 /* BrandMark.swift */,
+				85E25DB19F9371F34DABF461 /* Cards.swift */,
+				70273544C7EA16D0123882DF /* UIComponents.swift */,
+				4DA65563C8C52E7094B201FD /* VisualPrimitives.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		127C07A6FE7CA80746D2BD91 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A924470D9D6E554B067802EA /* ServiceProtocols.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1CF947268201D114ED99F9D9 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				F0BDB1B596F024EBC982E441 /* OnboardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		1D67323CC73AECDAB7F35EDB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				80CE64F1ACA93A1B6AD100D2 /* MetroModels.swift */,
+				C257D9BCC6D8CBD9D8402B15 /* PlaceModels.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		239ECCB54B139FB0BBDADD84 = {
+			isa = PBXGroup;
+			children = (
+				B7E41A92C03D4F8A9B12E4C1 /* Secrets.xcconfig */,
+				E082FFDED4CA2B0D59376E3B /* Nazlah */,
+				D1281E736A4ACF2B0785B386 /* NazlahTests */,
+				93932A5AF97E65E52ED24CC5 /* NazlahUITests */,
+				FDAFBBA22286DF4DF44D67DB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3766556968BC7434F3FF7500 /* Sample */ = {
+			isa = PBXGroup;
+			children = (
+				DDA8DAD2A561BD20E2768528 /* JSONCatalogServices.swift */,
+			);
+			path = Sample;
+			sourceTree = "<group>";
+		};
+		3FBC67DC224382BA88E95918 /* PlaceDetail */ = {
+			isa = PBXGroup;
+			children = (
+				493A96A9AC9B340A1833394D /* PlaceDetailView.swift */,
+			);
+			path = PlaceDetail;
+			sourceTree = "<group>";
+		};
+		496F316B97F944CC5BE700B6 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				850806756009A1FC17E94CC7 /* LocationServices.swift */,
+				C9659F039275526E010E5FF0 /* MockServices.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		5BCD014FF86EA375A4CD4209 /* AddPlace */ = {
+			isa = PBXGroup;
+			children = (
+				3711CC27237CEFCF9C01728B /* AddPlaceFlowView.swift */,
+			);
+			path = AddPlace;
+			sourceTree = "<group>";
+		};
+		5CBAB547E2FBACFCE6BD645B /* Moderator */ = {
+			isa = PBXGroup;
+			children = (
+				45E5C3E196267D6B7543F465 /* ModeratorViews.swift */,
+			);
+			path = Moderator;
+			sourceTree = "<group>";
+		};
+		68E2223F0D5CA477D02C97E7 /* MetroMap */ = {
+			isa = PBXGroup;
+			children = (
+				1A1FF5E5ECE4C4312C977888 /* MetroMapView.swift */,
+			);
+			path = MetroMap;
+			sourceTree = "<group>";
+		};
+		70CF58ABF77621FD88CE9B6D /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				AEEFF93A24A0ED9223CBC659 /* Enums */,
+				1D67323CC73AECDAB7F35EDB /* Models */,
+				127C07A6FE7CA80746D2BD91 /* Services */,
+				90D356C4F74E2BB3BD427400 /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		7246993D40BA751B1C4A5040 /* AroundYou */ = {
+			isa = PBXGroup;
+			children = (
+				D613CAB8326EE64CBD0AC638 /* AroundYouView.swift */,
+			);
+			path = AroundYou;
+			sourceTree = "<group>";
+		};
+		7E66FB27C2D1AB5E03A21964 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				69B028DD031B6E979D732646 /* NazlahTokens.swift */,
+				D1C0D1C00000000000000002 /* DalilCopy.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		824E0CCF26D92C6EE0498EEB /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				A486CF0F884D16CF52E77237 /* FavoritesView.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		8E3E1C30E1E4D58FFDD4F432 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				0540D638540E96FC3657153B /* GoogleRoutesClient.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		90D356C4F74E2BB3BD427400 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				2E11B1DB21FD2301BCB351BD /* AccessAndSafety.swift */,
+				6C14CF408F6FEC66D85FA569 /* DiscoveryLogic.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		93932A5AF97E65E52ED24CC5 /* NazlahUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E6CAF07D5AC4EC4C07028117 /* NazlahUITests.swift */,
+			);
+			path = NazlahUITests;
+			sourceTree = "<group>";
+		};
+		9DD7793E3E195ABFA61F0BB6 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				840188F6A60F9D917CDCC0E6 /* SplashView.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		A6218250531531F4ED51D338 /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				066ECF677654D2C038A1C9D3 /* Components */,
+				7E66FB27C2D1AB5E03A21964 /* Theme */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		ABFC73E3B82918E2C398E612 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				75F08162DB9BFC435B75A721 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		AC92DA3801668ACADB1CA43C /* Station */ = {
+			isa = PBXGroup;
+			children = (
+				E53D51D3B3AEF7F33BBBAB3F /* StationDetailView.swift */,
+			);
+			path = Station;
+			sourceTree = "<group>";
+		};
+		AEEFF93A24A0ED9223CBC659 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				6DB4DF7C49B9085FC689CFF0 /* AppEnums.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		B0CF7B5924D2F1C42475ABDE /* App */ = {
+			isa = PBXGroup;
+			children = (
+				AC5D1F43C2A3B56D7C2C0EA2 /* AppEnvironment.swift */,
+				5009F1A16E0B506779ECD883 /* CatalogSession.swift */,
+				F2C03CD362CB5B626A86E3C6 /* NazlahApp.swift */,
+				71D7EBDD4EA66E05B97B9351 /* RootView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		BAE5BA8381DA241687A1D170 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				496F316B97F944CC5BE700B6 /* Mock */,
+				8E3E1C30E1E4D58FFDD4F432 /* Remote */,
+				3766556968BC7434F3FF7500 /* Sample */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		BE2946796B3F6098870469E8 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				DA7DE85B21300DDE00486974 /* Account */,
+				5BCD014FF86EA375A4CD4209 /* AddPlace */,
+				7246993D40BA751B1C4A5040 /* AroundYou */,
+				824E0CCF26D92C6EE0498EEB /* Favorites */,
+				ABFC73E3B82918E2C398E612 /* Home */,
+				68E2223F0D5CA477D02C97E7 /* MetroMap */,
+				5CBAB547E2FBACFCE6BD645B /* Moderator */,
+				1CF947268201D114ED99F9D9 /* Onboarding */,
+				3FBC67DC224382BA88E95918 /* PlaceDetail */,
+				DDEBD64D2EAC1B19C9F6783F /* PlacesMap */,
+				9DD7793E3E195ABFA61F0BB6 /* Splash */,
+				AC92DA3801668ACADB1CA43C /* Station */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		CEE739D784405585A75DE53C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D0D3B7CF06E0D9C6A27E299F /* Fonts */,
+				DBB681F33488D51EF5D6C45A /* SampleData */,
+				F4303F19F842082949EF8D4B /* Assets.xcassets */,
+				6F02810D952D7470E774A89E /* Localizable.xcstrings */,
+				797A94150EEDC9261C92E35B /* PrivacyInfo.xcprivacy */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D0D3B7CF06E0D9C6A27E299F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				ACC9657AE0434188B685F34F /* Alexandria-Bold.ttf */,
+				ABBA0D0D783824456D26F2C8 /* Alexandria-ExtraBold.ttf */,
+				765455ACC3963C025A3E7719 /* Alexandria-Regular.ttf */,
+				1BA34928DB3B92DD1B5A2860 /* Alexandria-SemiBold.ttf */,
+				F3D91A7C4E2B8C6A1D5F0E9B /* Changa-Variable.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		D1281E736A4ACF2B0785B386 /* NazlahTests */ = {
+			isa = PBXGroup;
+			children = (
+				F5D7F9DC98D0ABDF827B6468 /* DiscoveryLogicTests.swift */,
+			);
+			path = NazlahTests;
+			sourceTree = "<group>";
+		};
+		DA7DE85B21300DDE00486974 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				0C3052EBB8C5EBFA5DF95D90 /* AccountAndAuthViews.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		DBB681F33488D51EF5D6C45A /* SampleData */ = {
+			isa = PBXGroup;
+			children = (
+				17893C24C165421297E0812F /* metro_catalog.json */,
+				89D2F0C69AE42E8C8797EB9B /* places.json */,
+			);
+			path = SampleData;
+			sourceTree = "<group>";
+		};
+		DDEBD64D2EAC1B19C9F6783F /* PlacesMap */ = {
+			isa = PBXGroup;
+			children = (
+				E7A1E1766836FE16B1FB6BFC /* PlacesMapView.swift */,
+			);
+			path = PlacesMap;
+			sourceTree = "<group>";
+		};
+		E082FFDED4CA2B0D59376E3B /* Nazlah */ = {
+			isa = PBXGroup;
+			children = (
+				B0CF7B5924D2F1C42475ABDE /* App */,
+				BAE5BA8381DA241687A1D170 /* Data */,
+				A6218250531531F4ED51D338 /* DesignSystem */,
+				70CF58ABF77621FD88CE9B6D /* Domain */,
+				BE2946796B3F6098870469E8 /* Features */,
+				CEE739D784405585A75DE53C /* Resources */,
+				673975CF992220B75FC93D49 /* Info.plist */,
+				51AC3E271B5D8F3F23C913A4 /* Nazlah.entitlements */,
+			);
+			path = Nazlah;
+			sourceTree = "<group>";
+		};
+		FDAFBBA22286DF4DF44D67DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				83AA35E2CFF0D438BD680650 /* Nazlah.app */,
+				3671BCDBA2025B597D0B1406 /* NazlahTests.xctest */,
+				42D96401B11DBF8A2BE2694B /* NazlahUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		65FB7835854BBD00D33279A3 /* NazlahTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 033F094CB3A36AA45036161E /* Build configuration list for PBXNativeTarget "NazlahTests" */;
+			buildPhases = (
+				364A2BDC1977DE796F48202A /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1476EA5AEAEBCB2BC3F791C7 /* PBXTargetDependency */,
+			);
+			name = NazlahTests;
+			packageProductDependencies = (
+			);
+			productName = NazlahTests;
+			productReference = 3671BCDBA2025B597D0B1406 /* NazlahTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E7EF112392E02BADCB327BA5 /* NazlahUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1074922A4CF9806B1AF00589 /* Build configuration list for PBXNativeTarget "NazlahUITests" */;
+			buildPhases = (
+				9272586270E894747F78536F /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5726297D1C48C0AA00B017D3 /* PBXTargetDependency */,
+			);
+			name = NazlahUITests;
+			packageProductDependencies = (
+			);
+			productName = NazlahUITests;
+			productReference = 42D96401B11DBF8A2BE2694B /* NazlahUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		F60CEA71C029B374999B0A54 /* Nazlah */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7AFDDB5F58A269F9718176A7 /* Build configuration list for PBXNativeTarget "Nazlah" */;
+			buildPhases = (
+				77C23D430DDE503CE6B6730F /* Sources */,
+				7F3AC74BA2C39143A60968EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Nazlah;
+			packageProductDependencies = (
+			);
+			productName = Nazlah;
+			productReference = 83AA35E2CFF0D438BD680650 /* Nazlah.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3ACCAACE2A03DC36346DC683 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					65FB7835854BBD00D33279A3 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+					E7EF112392E02BADCB327BA5 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+						TestTargetID = F60CEA71C029B374999B0A54;
+					};
+					F60CEA71C029B374999B0A54 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 78E57C25148E2627DD3F4B7A /* Build configuration list for PBXProject "Nazlah" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				ar,
+				en,
+			);
+			mainGroup = 239ECCB54B139FB0BBDADD84;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = FDAFBBA22286DF4DF44D67DB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F60CEA71C029B374999B0A54 /* Nazlah */,
+				65FB7835854BBD00D33279A3 /* NazlahTests */,
+				E7EF112392E02BADCB327BA5 /* NazlahUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7F3AC74BA2C39143A60968EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2445C90B6BFAEF753F1220F6 /* Alexandria-Bold.ttf in Resources */,
+				483460BFB0AF1ACDD99B7CF4 /* Alexandria-ExtraBold.ttf in Resources */,
+				2F66460FDB99BE6D19FA06FD /* Alexandria-Regular.ttf in Resources */,
+				E0062C99166F9E12D41DD38D /* Alexandria-SemiBold.ttf in Resources */,
+				C8A1E4D29F3B4A6E8D1C0B7A /* Changa-Variable.ttf in Resources */,
+				4231B50B141ED20AEE3D850C /* Assets.xcassets in Resources */,
+				2DEF96B471C54280B236CE07 /* Localizable.xcstrings in Resources */,
+				5C445B6F56D35D4E13160CF1 /* PrivacyInfo.xcprivacy in Resources */,
+				CA8BED339306D29553D54636 /* metro_catalog.json in Resources */,
+				64BC92BA4EA8B423AF96EB8F /* places.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		364A2BDC1977DE796F48202A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A0B8153DF46C2D64C1EE52D /* DiscoveryLogicTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77C23D430DDE503CE6B6730F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2D3121AAE69072EBDC5CBC2 /* AccessAndSafety.swift in Sources */,
+				215473866AF7230937D94008 /* AccountAndAuthViews.swift in Sources */,
+				F18F30227243DC6708BB7091 /* AddPlaceFlowView.swift in Sources */,
+				288B83D12EE93CCDF0605EB4 /* AppChip.swift in Sources */,
+				A7C3E91F4B2D80C156E4D0A2 /* DalilAtoms.swift in Sources */,
+				67351A35313CF861B6ADA017 /* AppEnums.swift in Sources */,
+				DDFE8EA70483B2245E8CDC7F /* AppEnvironment.swift in Sources */,
+				181136A132E0F481E3D4A0AB /* AroundYouView.swift in Sources */,
+				08674B52F27F416434648C2E /* BottomNavigation.swift in Sources */,
+				F5065C508CDA9F9F5279C1DD /* BrandMark.swift in Sources */,
+				FBD4522CC9B6F605A3D77476 /* Cards.swift in Sources */,
+				F8C42A0840C8415F4AFA12D9 /* CatalogSession.swift in Sources */,
+				D435B51E9556145EE75CEA60 /* DiscoveryLogic.swift in Sources */,
+				593AC3F44434F60135A6E890 /* FavoritesView.swift in Sources */,
+				93999DE3D4B7051423C3D9CF /* GoogleRoutesClient.swift in Sources */,
+				D573E039CFCB8CB255F62CEF /* HomeView.swift in Sources */,
+				C11F2557C44ACCD789561D7F /* JSONCatalogServices.swift in Sources */,
+				AB7C23862C021553F2BF7F5B /* LocationServices.swift in Sources */,
+				149F309671DBC436CB56D784 /* MetroMapView.swift in Sources */,
+				B98716944D16578F012444AB /* MetroModels.swift in Sources */,
+				5CB524B8D0DA60C0E6A1D47D /* MockServices.swift in Sources */,
+				B5896B3532EF8D89493B4596 /* ModeratorViews.swift in Sources */,
+				B1C896C2FF1F8C1705D58030 /* NazlahApp.swift in Sources */,
+				C90EB92DA48C6F3E217AD43A /* NazlahTokens.swift in Sources */,
+				D1C0D1C00000000000000001 /* DalilCopy.swift in Sources */,
+				9A02F0CBCCF3F5800CC08B89 /* OnboardingView.swift in Sources */,
+				D4893B263390BA55A497D588 /* PlaceDetailView.swift in Sources */,
+				080CAC3903940CD249A5AFBB /* PlaceModels.swift in Sources */,
+				16D5ECFC35D3B9434E3B72D7 /* PlacesMapView.swift in Sources */,
+				F579756E2D85869A8BBCD302 /* RootView.swift in Sources */,
+				20DF190E65004E86C0B4D8D4 /* ServiceProtocols.swift in Sources */,
+				56F9D7EA6BD5C124421E288D /* SplashView.swift in Sources */,
+				1308A3B59AC68EABF038E9FD /* StationDetailView.swift in Sources */,
+				AFF75968F86E1EB763B7850D /* UIComponents.swift in Sources */,
+				1C87C95A84428D935FBC5399 /* VisualPrimitives.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9272586270E894747F78536F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67D47A8644BEDE005AEACCEB /* NazlahUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1476EA5AEAEBCB2BC3F791C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F60CEA71C029B374999B0A54 /* Nazlah */;
+			targetProxy = 101F94D45009B648243D627A /* PBXContainerItemProxy */;
+		};
+		5726297D1C48C0AA00B017D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F60CEA71C029B374999B0A54 /* Nazlah */;
+			targetProxy = DC0CE67A86A483210391EF19 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		110B0E12100DD25CD32F1AE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7E41A92C03D4F8A9B12E4C1 /* Secrets.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_LANGUAGE = ar;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "دليل";
+				INFOPLIST_KEY_NSCameraUsageDescription = "حواليك يستخدم الكاميرا فقط عندما تلتقط صورة لمكان تضيفه.";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "دليلك يتابع موقعك أثناء الرحلة النشطة فقط، عشان ينبّهك عند كل محطة وخطوة تالية.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "دليلك يستخدم موقعك لعرض أقرب محطة، ومتابعة رحلتك على الخريطة حتى تصل.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "حواليك يحتاج الوصول للصور فقط عندما تضيف صور مكان من جهازك.";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = sa.nazlah.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		2370A38DFAEA1229745B9B0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sa.nazlah.app.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nazlah.app/Nazlah";
+			};
+			name = Debug;
+		};
+		2727F401EC105F5F36BC04C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sa.nazlah.app.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Nazlah;
+			};
+			name = Debug;
+		};
+		425561592218EC309A3735B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sa.nazlah.app.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Nazlah;
+			};
+			name = Release;
+		};
+		6AE02D00AD3993B757D17FAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7E41A92C03D4F8A9B12E4C1 /* Secrets.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_LANGUAGE = ar;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "دليل";
+				INFOPLIST_KEY_NSCameraUsageDescription = "حواليك يستخدم الكاميرا فقط عندما تلتقط صورة لمكان تضيفه.";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "دليلك يتابع موقعك أثناء الرحلة النشطة فقط، عشان ينبّهك عند كل محطة وخطوة تالية.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "دليلك يستخدم موقعك لعرض أقرب محطة، ومتابعة رحلتك على الخريطة حتى تصل.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "حواليك يحتاج الوصول للصور فقط عندما تضيف صور مكان من جهازك.";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = sa.nazlah.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		77D1B712E2130FC7EF4835B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7E41A92C03D4F8A9B12E4C1 /* Secrets.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = SunsetOrange;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Nazlah/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sa.nazlah.app;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A4CA0DFEF4FF0F1DD48DE85B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7E41A92C03D4F8A9B12E4C1 /* Secrets.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = SunsetOrange;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Nazlah/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sa.nazlah.app;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E93C19102F951DC6AACA5AF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sa.nazlah.app.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nazlah.app/Nazlah";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		033F094CB3A36AA45036161E /* Build configuration list for PBXNativeTarget "NazlahTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2370A38DFAEA1229745B9B0A /* Debug */,
+				E93C19102F951DC6AACA5AF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		1074922A4CF9806B1AF00589 /* Build configuration list for PBXNativeTarget "NazlahUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2727F401EC105F5F36BC04C9 /* Debug */,
+				425561592218EC309A3735B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		78E57C25148E2627DD3F4B7A /* Build configuration list for PBXProject "Nazlah" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AE02D00AD3993B757D17FAA /* Debug */,
+				110B0E12100DD25CD32F1AE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7AFDDB5F58A269F9718176A7 /* Build configuration list for PBXNativeTarget "Nazlah" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4CA0DFEF4FF0F1DD48DE85B /* Debug */,
+				77D1B712E2130FC7EF4835B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3ACCAACE2A03DC36346DC683 /* Project object */;
+}
