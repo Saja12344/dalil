@@ -534,7 +534,7 @@ struct SearchResultsView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(AppSpacing.item)
                 .background(AppColors.cardSurface)
-                .clipShape(RoundedRectangle(cornerRadius: AppRadius.card, style: .continuous))
+                .dalilCard()
             Spacer()
         }
         .padding(.horizontal, AppSpacing.screen)
@@ -739,7 +739,7 @@ struct HomeBrowseView: View {
                         .padding(.horizontal, AppSpacing.screen)
                         .frame(minHeight: AppSize.placeRow)
                         .background(AppColors.cardSurface)
-                        .clipShape(RoundedRectangle(cornerRadius: AppRadius.card, style: .continuous))
+                        .dalilCard()
                     }
                     .buttonStyle(.plain)
                 }
@@ -765,7 +765,7 @@ struct HomeBrowseView: View {
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .padding(AppSpacing.screen)
                             .background(AppColors.cardSurface)
-                            .clipShape(RoundedRectangle(cornerRadius: AppRadius.card, style: .continuous))
+                            .dalilCard()
                     }
                     ForEach(items) { item in
                         Button { router.open(.place(item.place.id)) } label: {

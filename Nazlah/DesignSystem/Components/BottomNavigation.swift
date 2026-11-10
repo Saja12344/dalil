@@ -26,8 +26,8 @@ struct BottomNavigation: View {
         .background(AppColors.cardSurface)
         .overlay(alignment: .top) {
             Rectangle()
-                .fill(AppColors.border.opacity(0.7))
-                .frame(height: 1)
+                .fill(AppOutline.ink)
+                .frame(height: AppOutline.width)
         }
     }
 
@@ -49,7 +49,16 @@ struct BottomNavigation: View {
                     .font(AppTypography.semibold(11))
                     .lineLimit(1)
             }
-            .foregroundStyle(active ? AppColors.accent : AppColors.secondaryText)
+            .foregroundStyle(active ? AppColors.accentInk : AppColors.secondaryText)
+            .padding(.horizontal, AppSpacing.item)
+            .padding(.vertical, AppSpacing.xxs)
+            .background {
+                if active {
+                    Capsule()
+                        .fill(AppColors.primaryContainer)
+                        .overlay(Capsule().strokeBorder(AppOutline.ink, lineWidth: AppOutline.width))
+                }
+            }
             .frame(maxWidth: .infinity)
             .frame(minHeight: 48)
         }

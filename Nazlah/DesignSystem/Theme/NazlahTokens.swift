@@ -307,6 +307,41 @@ struct ShadowToken {
     var y: CGFloat
 }
 
+/// Light neo-brutalist outline: a thin ink edge plus a small hard (unblurred) offset shadow.
+/// Kept deliberately subtle — 1.5pt line, 3pt offset — so the app stays calm.
+enum AppOutline {
+    static let width: CGFloat = 1.5
+    static let offset: CGFloat = 3
+    static let smallOffset: CGFloat = 2
+    static let ink = Color(light: "111111", dark: "6A6A6A")
+    static let shadow = Color(light: "111111", dark: "000000")
+}
+
+extension View {
+    /// Ink outline + hard offset shadow on any shape. Pass `offset: 0` for outline only.
+    func dalilBlock<S: InsettableShape>(
+        _ shape: S,
+        offset: CGFloat = AppOutline.offset,
+        lineWidth: CGFloat = AppOutline.width
+    ) -> some View {
+        self
+            .clipShape(shape)
+            .overlay(shape.strokeBorder(AppOutline.ink, lineWidth: lineWidth))
+            .background {
+                if offset > 0 {
+                    shape
+                        .fill(AppOutline.shadow)
+                        .offset(x: offset, y: offset)
+                        .accessibilityHidden(true)
+                }
+            }
+    }
+
+    func dalilCard(offset: CGFloat = AppOutline.offset) -> some View {
+        dalilBlock(RoundedRectangle(cornerRadius: AppRadius.card, style: .continuous), offset: offset)
+    }
+}
+
 extension View {
     func appCardShadow() -> some View {
         shadow(color: AppShadow.card.color, radius: AppShadow.card.radius, x: 0, y: AppShadow.card.y)

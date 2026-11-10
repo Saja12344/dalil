@@ -480,8 +480,7 @@ struct MetroMapView: View {
                         .padding(.horizontal, AppSpacing.item)
                         .padding(.vertical, AppSpacing.tight)
                         .background(AppColors.cardSurface)
-                        .clipShape(Capsule())
-                        .overlay(Capsule().stroke(AppColors.controlBorder, lineWidth: 1))
+                        .dalilBlock(Capsule(), offset: AppOutline.smallOffset)
                         .accessibilityLabel(pickHint)
                 }
                 sheet
@@ -536,9 +535,9 @@ struct MetroMapView: View {
             text: .constant(""),
             trailingSystemImage: nil,
             trailingAction: nil,
-            onActivate: { router.presentSearch() }
+            onActivate: { router.presentSearch() },
+            elevated: true
         )
-        .shadow(color: AppColors.navy.opacity(0.08), radius: 12, y: 4)
     }
 
     private var lineChips: some View {
@@ -768,8 +767,7 @@ struct MetroMapView: View {
             .foregroundStyle(AppColors.primaryText)
             .frame(width: AppSize.touch, height: AppSize.touch)
             .background(AppColors.cardSurface)
-            .clipShape(Circle())
-            .overlay(Circle().stroke(AppColors.controlBorder, lineWidth: 1))
+            .dalilBlock(Circle(), offset: AppOutline.smallOffset)
             .accessibilityLabel(label)
     }
 }

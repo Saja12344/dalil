@@ -163,13 +163,7 @@ struct PlaceRow: View {
         .padding(.horizontal, AppSpacing.screen)
         .frame(minHeight: AppSize.placeRow)
         .background(AppColors.cardSurface)
-        .clipShape(RoundedRectangle(cornerRadius: AppRadius.card, style: .continuous))
-        .overlay {
-            if colorScheme == .dark {
-                RoundedRectangle(cornerRadius: AppRadius.card, style: .continuous)
-                    .stroke(AppColors.border, lineWidth: 1)
-            }
-        }
+        .dalilCard()
         .accessibilityElement(children: .combine)
     }
 
@@ -231,13 +225,7 @@ struct SearchField: View {
         .padding(.trailing, trailingAction == nil ? AppSpacing.screen : AppSpacing.xxs)
         .frame(height: AppSize.search)
         .background(AppColors.cardSurface)
-        .clipShape(Capsule())
-        .overlay {
-            if !elevated {
-                Capsule().stroke(AppColors.controlBorder, lineWidth: 1)
-            }
-        }
-        .shadow(color: elevated ? AppColors.navy.opacity(0.08) : .clear, radius: 10, y: 3)
+        .dalilBlock(Capsule(), offset: elevated ? AppOutline.offset : AppOutline.smallOffset)
         .onAppear {
             guard autoFocus, onActivate == nil else { return }
             focused = true
@@ -323,8 +311,9 @@ struct CategoryChip: View {
         }
         .padding(.horizontal, AppSpacing.item)
         .frame(height: AppSize.categoryChip)
-        .background(isSelected ? AppColors.navy : AppColors.categoryTint(category))
-        .clipShape(Capsule())
+        .background(isSelected ? AppColors.navy : AppColors.cardSurface)
+        .dalilBlock(Capsule(), offset: isSelected ? 0 : AppOutline.smallOffset)
+        .padding(.bottom, AppOutline.smallOffset)
     }
 }
 
@@ -344,8 +333,13 @@ struct CategoryTile: View {
         }
         .frame(maxWidth: .infinity)
         .frame(height: AppSize.thumb + AppSpacing.section)
-        .background(AppColors.categoryTint(browse.placeCategory))
-        .clipShape(RoundedRectangle(cornerRadius: AppRadius.card, style: .continuous))
+        .background {
+            ZStack {
+                AppColors.cardSurface
+                AppColors.categoryTint(browse.placeCategory)
+            }
+        }
+        .dalilCard()
         .accessibilityElement(children: .combine)
         .accessibilityLabel(DalilCopy.t(browse.copyKey, language))
     }
@@ -408,7 +402,7 @@ struct PrimaryButton: View {
         }
         .buttonStyle(.plain)
         .background(AppColors.accent)
-        .clipShape(RoundedRectangle(cornerRadius: AppRadius.button, style: .continuous))
+        .dalilBlock(RoundedRectangle(cornerRadius: AppRadius.button, style: .continuous))
     }
 }
 
@@ -426,11 +420,7 @@ struct SecondaryButton: View {
         }
         .buttonStyle(.plain)
         .background(AppColors.cardSurface)
-        .clipShape(RoundedRectangle(cornerRadius: AppRadius.button, style: .continuous))
-        .overlay(
-            RoundedRectangle(cornerRadius: AppRadius.button, style: .continuous)
-                .stroke(AppColors.controlBorder, lineWidth: 1)
-        )
+        .dalilBlock(RoundedRectangle(cornerRadius: AppRadius.button, style: .continuous), offset: AppOutline.smallOffset)
     }
 }
 

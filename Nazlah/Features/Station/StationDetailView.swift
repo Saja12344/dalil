@@ -84,7 +84,7 @@ struct StationDetailView: View {
                 .padding(AppSpacing.item)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .background(AppColors.cardSurface)
-                .clipShape(RoundedRectangle(cornerRadius: AppRadius.card, style: .continuous))
+                .dalilCard()
             }
         }
     }
@@ -99,7 +99,7 @@ struct StationDetailView: View {
                     .padding(AppSpacing.item)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .background(AppColors.cardSurface)
-                    .clipShape(RoundedRectangle(cornerRadius: AppRadius.card, style: .continuous))
+                    .dalilCard()
             } else {
                 ForEach(exits) { exit in
                     HStack(alignment: .top, spacing: AppSpacing.item) {
@@ -124,7 +124,7 @@ struct StationDetailView: View {
                     .padding(AppSpacing.item)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .background(AppColors.cardSurface)
-                    .clipShape(RoundedRectangle(cornerRadius: AppRadius.card, style: .continuous))
+                    .dalilCard()
                 }
             }
         }

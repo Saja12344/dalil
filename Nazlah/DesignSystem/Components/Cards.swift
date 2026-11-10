@@ -46,13 +46,7 @@ struct PlaceCard: View {
         }
         .padding(AppSpacing.item)
         .background(AppColors.cardSurface)
-        .clipShape(RoundedRectangle(cornerRadius: AppRadius.card, style: .continuous))
-        .overlay {
-            if colorScheme == .dark {
-                RoundedRectangle(cornerRadius: AppRadius.card, style: .continuous)
-                    .stroke(AppColors.border, lineWidth: 1)
-            }
-        }
+        .dalilCard()
         .accessibilityElement(children: onSave == nil ? .combine : .contain)
         .accessibilityLabel(
             [
@@ -134,13 +128,7 @@ struct StationCard: View {
         }
         .padding(AppSpacing.screen)
         .background(AppColors.cardSurface)
-        .clipShape(RoundedRectangle(cornerRadius: AppRadius.card, style: .continuous))
-        .overlay {
-            if colorScheme == .dark {
-                RoundedRectangle(cornerRadius: AppRadius.card, style: .continuous)
-                    .stroke(AppColors.border, lineWidth: 1)
-            }
-        }
+        .dalilCard()
     }
 }
 
@@ -187,6 +175,12 @@ struct HomeStationHero: View {
             }
             .background(fill)
             .clipShape(RoundedRectangle(cornerRadius: AppRadius.card, style: .continuous))
+            .background {
+                RoundedRectangle(cornerRadius: AppRadius.card, style: .continuous)
+                    .fill(AppColors.accent)
+                    .offset(x: AppOutline.offset + 1, y: AppOutline.offset + 1)
+                    .accessibilityHidden(true)
+            }
         }
         .buttonStyle(.plain)
         .accessibilityElement(children: .combine)
@@ -256,7 +250,7 @@ struct PlacePosterCard: View {
             PlacePhotoView(place: ranked.place, glyph: ranked.place.category.symbolName)
                 .frame(width: width, height: photoHeight)
                 .background(AppColors.categoryTint(ranked.place.category))
-                .clipShape(RoundedRectangle(cornerRadius: AppRadius.card, style: .continuous))
+                .dalilCard()
             Text(ranked.place.localizedName(language: language))
                 .appText(.headline)
                 .foregroundStyle(AppColors.primaryText)

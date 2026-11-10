@@ -8,7 +8,7 @@ struct PlacePlaceholderArt: View {
             AppColors.warmBackground
             Canvas { context, size in
                 let color = AppColors.navy.opacity(0.55)
-                let stroke = StrokeStyle(lineWidth: 1.6, lineCap: .round, lineJoin: .round)
+                let stroke = StrokeStyle(lineWidth: 2.2, lineCap: .round, lineJoin: .round)
                 switch category {
                 case .cafe, .cowork:
                     var cup = Path()

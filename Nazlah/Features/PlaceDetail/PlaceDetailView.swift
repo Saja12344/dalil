@@ -158,7 +158,7 @@ struct PlaceDetailView: View {
         .padding(.vertical, AppSpacing.item)
         .padding(.horizontal, AppSpacing.tight)
         .background(AppColors.cardSurface)
-        .clipShape(RoundedRectangle(cornerRadius: AppRadius.card, style: .continuous))
+        .dalilCard()
         .accessibilityElement(children: .combine)
     }
 
@@ -214,7 +214,7 @@ struct PlaceDetailView: View {
             }
             .padding(AppSpacing.item)
             .background(AppColors.cardSurface)
-            .clipShape(RoundedRectangle(cornerRadius: AppRadius.card, style: .continuous))
+            .dalilCard()
         }
     }
 
@@ -394,7 +394,7 @@ struct TripPlanView: View {
         }
         .padding(AppSpacing.screen)
         .background(AppColors.cardSurface)
-        .clipShape(RoundedRectangle(cornerRadius: AppRadius.card, style: .continuous))
+        .dalilCard()
     }
 
     private func originCoordinate(for plan: PreparedTrip) -> GeoCoordinate {

@@ -221,7 +221,7 @@ struct AroundYouView: View {
                     .padding(AppSpacing.item)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .background(AppColors.cardSurface)
-                    .clipShape(RoundedRectangle(cornerRadius: AppRadius.card, style: .continuous))
+                    .dalilCard()
             } else {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(alignment: .top, spacing: AppSpacing.tight) {
@@ -316,9 +316,8 @@ struct SavedPlaceChip: View {
             .foregroundStyle(isPlaceholder ? AppColors.secondaryText : AppColors.primaryText)
             .padding(.horizontal, AppSpacing.item)
             .frame(height: AppSize.chip)
-            .background(AppColors.softSand)
-            .clipShape(Capsule())
-            .shadow(color: AppColors.navy.opacity(0.06), radius: 8, y: 2)
+            .background(AppColors.cardSurface)
+            .dalilBlock(Capsule(), offset: AppOutline.smallOffset)
         }
         .buttonStyle(.plain)
         .accessibilityLabel(title)
@@ -411,11 +410,7 @@ struct SaveLocationSheet: View {
             .padding(.horizontal, AppSpacing.item)
             .frame(height: AppSize.search)
             .background(AppColors.cardSurface)
-            .clipShape(RoundedRectangle(cornerRadius: AppRadius.button, style: .continuous))
-            .overlay(
-                RoundedRectangle(cornerRadius: AppRadius.button, style: .continuous)
-                    .stroke(AppColors.controlBorder, lineWidth: 1)
-            )
+            .dalilBlock(RoundedRectangle(cornerRadius: AppRadius.button, style: .continuous), offset: AppOutline.smallOffset)
             .submitLabel(.done)
             .onSubmit { if isRename || !trimmedName.isEmpty { saveCustom() } }
     }
@@ -428,8 +423,7 @@ struct SaveLocationSheet: View {
                     .foregroundStyle(AppColors.primaryText)
                     .frame(width: AppSize.touch, height: AppSize.touch)
                     .background(AppColors.cardSurface)
-                    .clipShape(Circle())
-                    .overlay(Circle().stroke(AppColors.controlBorder, lineWidth: 1))
+                    .dalilBlock(Circle(), offset: AppOutline.smallOffset)
                 Text(title)
                     .appText(.headline)
                     .foregroundStyle(AppColors.primaryText)
@@ -437,11 +431,7 @@ struct SaveLocationSheet: View {
             }
             .padding(AppSpacing.item)
             .background(AppColors.cardSurface)
-            .clipShape(RoundedRectangle(cornerRadius: AppRadius.card, style: .continuous))
-            .overlay(
-                RoundedRectangle(cornerRadius: AppRadius.card, style: .continuous)
-                    .stroke(AppColors.controlBorder, lineWidth: 1)
-            )
+            .dalilBlock(RoundedRectangle(cornerRadius: AppRadius.card, style: .continuous), offset: AppOutline.smallOffset)
         }
         .buttonStyle(.plain)
         .accessibilityLabel(title)

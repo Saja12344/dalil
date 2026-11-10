@@ -17,7 +17,11 @@ struct NazlahButton: View {
         .buttonStyle(.plain)
         .background(background)
         .foregroundStyle(foreground)
-        .clipShape(RoundedRectangle(cornerRadius: AppRadius.button, style: .continuous))
+        .dalilBlock(
+            RoundedRectangle(cornerRadius: AppRadius.button, style: .continuous),
+            offset: kind == .ghost ? 0 : AppOutline.offset,
+            lineWidth: kind == .ghost ? 0 : AppOutline.width
+        )
     }
 
     private var background: Color {
@@ -58,11 +62,7 @@ struct NazlahSearchField: View {
         .padding(.horizontal, 14)
         .padding(.vertical, 12)
         .background(AppColors.cardSurface)
-        .clipShape(RoundedRectangle(cornerRadius: AppRadius.search, style: .continuous))
-        .overlay(
-            RoundedRectangle(cornerRadius: AppRadius.search, style: .continuous)
-                .stroke(AppColors.border, lineWidth: 1)
-        )
+        .dalilBlock(RoundedRectangle(cornerRadius: AppRadius.search, style: .continuous), offset: AppOutline.smallOffset)
         .accessibilityElement(children: .contain)
     }
 }
@@ -88,11 +88,7 @@ struct SearchLaunchButton: View {
             .padding(.horizontal, 14)
             .padding(.vertical, 12)
             .background(AppColors.cardSurface)
-            .clipShape(RoundedRectangle(cornerRadius: AppRadius.search, style: .continuous))
-            .overlay(
-                RoundedRectangle(cornerRadius: AppRadius.search, style: .continuous)
-                    .stroke(AppColors.border, lineWidth: 1)
-            )
+            .dalilBlock(RoundedRectangle(cornerRadius: AppRadius.search, style: .continuous), offset: AppOutline.smallOffset)
         }
         .buttonStyle(.plain)
     }
@@ -142,7 +138,7 @@ struct PlaceCardSkeleton: View {
         }
         .padding(12)
         .background(AppColors.cardSurface)
-        .clipShape(RoundedRectangle(cornerRadius: AppRadius.card, style: .continuous))
+        .dalilCard(offset: 0)
     }
 }
 

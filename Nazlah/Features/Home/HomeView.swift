@@ -180,11 +180,7 @@ struct HomeView: View {
                             .padding(14)
                             .frame(minWidth: 108, alignment: .leading)
                             .background(AppColors.cardSurface)
-                            .clipShape(RoundedRectangle(cornerRadius: AppRadius.card, style: .continuous))
-                            .overlay(
-                                RoundedRectangle(cornerRadius: AppRadius.card, style: .continuous)
-                                    .stroke(AppColors.border, lineWidth: 1)
-                            )
+                            .dalilBlock(RoundedRectangle(cornerRadius: AppRadius.card, style: .continuous), offset: AppOutline.smallOffset)
                         }
                         .buttonStyle(.plain)
                     }
