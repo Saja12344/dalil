@@ -15,13 +15,7 @@ struct FavoritesView: View {
     private var hasPinned: Bool { !settings.savedLocations.isEmpty }
 
     var body: some View {
-        Group {
-            if hasRecents || hasSaved || hasPinned {
-                tripsList
-            } else {
-                savedEmpty(signedOut: environment.auth.currentUser == nil)
-            }
-        }
+        tripsList
         .background(AppColors.warmBackground.ignoresSafeArea())
         .navigationTitle(t("favorites.title"))
         .navigationBarTitleDisplayMode(.inline)
@@ -40,12 +34,8 @@ struct FavoritesView: View {
                             router.open(.savedTrip(location.id))
                         } label: {
                             HStack(spacing: AppSpacing.item) {
-                                Image(systemName: location.kind.systemImage)
-                                    .font(.system(size: AppTextStyle.body.size, weight: .semibold))
-                                    .foregroundStyle(AppColors.primaryText)
+                                DalilIcon(glyph: location.kind.glyph, size: 30)
                                     .frame(width: AppSize.touch, height: AppSize.touch)
-                                    .background(AppColors.softSand)
-                                    .clipShape(Circle())
                                 VStack(alignment: .leading, spacing: AppSpacing.xxs) {
                                     Text(location.title(settings.language))
                                         .appText(.headline)
@@ -58,7 +48,7 @@ struct FavoritesView: View {
                                 }
                                 Spacer(minLength: 0)
                             }
-                            .padding(.vertical, AppSpacing.xxs)
+                            .themedRow()
                         }
                         .buttonStyle(.plain)
                         .contextMenu {
@@ -103,19 +93,15 @@ struct FavoritesView: View {
                             router.presentSearch(query: item)
                         } label: {
                             HStack(spacing: AppSpacing.item) {
-                                Image(systemName: "clock")
-                                    .font(.system(size: AppTextStyle.body.size, weight: .semibold))
-                                    .foregroundStyle(AppColors.secondaryText)
+                                DalilIcon(glyph: .search, size: 26, shadow: false)
                                     .frame(width: AppSize.touch, height: AppSize.touch)
-                                    .background(AppColors.softSand)
-                                    .clipShape(Circle())
                                 Text(item)
                                     .appText(.headline)
                                     .foregroundStyle(AppColors.primaryText)
                                     .lineLimit(1)
                                 Spacer(minLength: 0)
                             }
-                            .padding(.vertical, AppSpacing.xxs)
+                            .themedRow()
                         }
                         .buttonStyle(.plain)
                         .swipeActions(edge: .trailing, allowsFullSwipe: true) {
@@ -186,6 +172,30 @@ struct FavoritesView: View {
             } header: {
                 sectionTitle(t("favorites.saved"))
             }
+
+            if !hasSaved, !suggestions.isEmpty {
+                Section {
+                    ForEach(suggestions) { item in
+                        HStack(spacing: AppSpacing.tight) {
+                            Button { router.open(.place(item.place.id)) } label: {
+                                PlaceRow(ranked: item, language: settings.language)
+                            }
+                            .buttonStyle(.plain)
+                            Button { save(item.place.id) } label: {
+                                DalilIcon(glyph: .saved, size: 28, shadow: false)
+                                    .frame(width: AppSize.touch, height: AppSize.touch)
+                            }
+                            .buttonStyle(.plain)
+                            .accessibilityLabel(t("place.save"))
+                        }
+                        .listRowInsets(rowInsets)
+                        .listRowSeparator(.hidden)
+                        .listRowBackground(Color.clear)
+                    }
+                } header: {
+                    sectionTitle(t("favorites.suggest"))
+                }
+            }
         }
         .listStyle(.plain)
         .scrollContentBackground(.hidden)
@@ -204,37 +214,56 @@ struct FavoritesView: View {
         EdgeInsets(top: AppSpacing.xxs, leading: AppSpacing.screen, bottom: AppSpacing.xxs, trailing: AppSpacing.screen)
     }
 
+    /// Theme card: the same black sign as home, with the saved icon and one action.
     private func savedEmpty(signedOut: Bool) -> some View {
-        VStack(spacing: 16) {
-            Image(systemName: "bookmark")
-                .font(.system(size: 28, weight: .semibold))
-                .foregroundStyle(AppColors.mint)
-                .frame(width: 72, height: 72)
-                .background(AppColors.mint.opacity(0.12))
-                .clipShape(Circle())
-            Text(t(signedOut ? "favorites.signedOut.title" : "favorites.empty.title"))
-                .font(AppTypography.bold(22))
-                .foregroundStyle(AppColors.primaryText)
-            Text(t(signedOut ? "favorites.signedOut.body" : "favorites.empty.body"))
-                .font(AppTypography.regular(15))
-                .foregroundStyle(AppColors.secondaryText)
-                .multilineTextAlignment(.center)
-                .padding(.horizontal, 28)
-            if signedOut {
-                Button(t("auth.signIn")) { router.isShowingAuth = true }
-                    .font(AppTypography.semibold(15))
-                    .foregroundStyle(AppColors.primaryText)
-                    .frame(width: 200, height: 48)
-                    .background(AppColors.cardSurface)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 16, style: .continuous)
-                            .stroke(AppColors.border, lineWidth: 1)
-                    )
-                    .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+        HStack(alignment: .top, spacing: AppSpacing.item) {
+            VStack(alignment: .leading, spacing: AppSpacing.tight) {
+                Text(t(signedOut ? "favorites.signedOut.title" : "favorites.empty.title"))
+                    .font(AppTypography.extraBold(24))
+                    .foregroundStyle(AppColors.cream)
+                Text(t(signedOut ? "favorites.signedOut.short" : "favorites.empty.body"))
+                    .appText(.subhead)
+                    .foregroundStyle(AppColors.cream.opacity(0.75))
+                    .fixedSize(horizontal: false, vertical: true)
+                if signedOut {
+                    Button { router.isShowingAuth = true } label: {
+                        Text(t("auth.signIn"))
+                            .appText(.headline)
+                            .foregroundStyle(AppColors.onAccent)
+                            .padding(.horizontal, AppSpacing.screen)
+                            .frame(height: AppSize.chip + AppSpacing.xxs)
+                            .background(AppColors.accent)
+                            .clipShape(Capsule())
+                    }
+                    .buttonStyle(.plain)
+                    .padding(.top, AppSpacing.xxs)
+                }
             }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            DalilIcon(glyph: .saved, size: 56, shadow: false)
+                .environment(\.colorScheme, .dark)
         }
-        .frame(maxWidth: .infinity)
-        .padding(AppSpacing.section)
+        .padding(AppSpacing.screen)
+        .background(AppColors.night)
+        .overlay(alignment: .bottom) {
+            AppColors.accent.frame(height: 4)
+        }
+        .clipShape(RoundedRectangle(cornerRadius: AppRadius.card, style: .continuous))
+    }
+
+    private var suggestions: [RankedPlace] {
+        Array(session.rankedPlaces.prefix(4))
+    }
+
+    private func save(_ placeId: String) {
+        Task {
+            guard let user = await environment.auth.currentUser else {
+                router.isShowingAuth = true
+                return
+            }
+            _ = try? await environment.favorites.toggle(userId: user.id, targetId: placeId, kind: .place)
+            await load()
+        }
     }
 
     private var placeItems: [RankedPlace] {
@@ -261,5 +290,19 @@ struct FavoritesView: View {
             return
         }
         records = (try? await environment.favorites.favorites(for: user.id)) ?? []
+    }
+}
+
+private extension View {
+    /// Card row used across the trips page: surface, hairline, 16 radius.
+    func themedRow() -> some View {
+        padding(.horizontal, AppSpacing.item)
+            .padding(.vertical, AppSpacing.tight)
+            .background(AppColors.cardSurface)
+            .clipShape(RoundedRectangle(cornerRadius: AppRadius.card, style: .continuous))
+            .overlay(
+                RoundedRectangle(cornerRadius: AppRadius.card, style: .continuous)
+                    .stroke(AppColors.border, lineWidth: 1)
+            )
     }
 }

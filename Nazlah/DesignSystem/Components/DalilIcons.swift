@@ -2,7 +2,8 @@ import SwiftUI
 
 /// Dalil's own duotone icon set, drawn from the "أيقونات دليلك" artboard.
 /// Each glyph is ink outline + one category color, on a 120×120 grid.
-/// This is the light cut: thinner ink (85%) and a short hard shadow (3.5 instead of 5).
+/// This is the light cut: thinner ink (85%), a short hard shadow, and no faces.
+/// In dark mode ink and paper swap (cream lines, dark fills) and the shadow is dropped.
 enum DalilGlyph: String, CaseIterable, Identifiable {
     case pin
     case discover
@@ -30,16 +31,21 @@ struct DalilIcon: View {
     /// Replaces the glyph's main color (category color). Ink and paper stay fixed.
     var tint: Color? = nil
     var shadow: Bool = true
+    @Environment(\.colorScheme) private var colorScheme
 
     var body: some View {
-        Canvas { context, canvas in
+        let dark = colorScheme == .dark
+        let ink = dark ? Color(hex: "ECE6DB") : Color(hex: "111111")
+        let paper = dark ? Color(hex: "1F1F1F") : Color.white
+        let dropsShadow = shadow && !dark
+        return Canvas { context, canvas in
             let scale = min(canvas.width, canvas.height) / 120
             context.translateBy(
                 x: (canvas.width - 120 * scale) / 2,
                 y: (canvas.height - 120 * scale) / 2
             )
             context.scaleBy(x: scale, y: scale)
-            DalilIconPainter(context: context, tint: tint, shadow: shadow).draw(glyph)
+            DalilIconPainter(context: context, tint: tint, shadow: dropsShadow, ink: ink, paper: paper).draw(glyph)
         }
         .frame(width: size, height: size)
         .accessibilityHidden(true)
@@ -62,9 +68,9 @@ private struct DalilIconPainter {
     let context: GraphicsContext
     let tint: Color?
     let shadow: Bool
+    let ink: Color
+    let paper: Color
 
-    private static let ink = Color(hex: "111111")
-    private static let paper = Color.white
     private static let orange = Color(hex: "FF4E00")
     private static let green = Color(hex: "008E51")
     private static let gold = Color(hex: "F2A20C")
@@ -74,8 +80,6 @@ private struct DalilIconPainter {
     let lightness: CGFloat = 0.85
     let shadowOffset: CGFloat = 3.5
 
-    private var ink: Color { Self.ink }
-    private var paper: Color { Self.paper }
 
     private func w(_ value: CGFloat) -> CGFloat { value * lightness }
     private func p(_ d: String) -> Path { SVGPathParser.path(d) }
@@ -177,22 +181,20 @@ private struct DalilIconPainter {
 
     private func cafe() {
         let cup = p("M24 42 H86 V76 Q86 100 62 100 H48 Q24 100 24 76 Z")
-        stroke(p("M44 14 Q38 22 44 30 M58 10 Q52 20 58 30 M72 14 Q66 22 72 30"), 4)
+        stroke(p("M46 14 Q40 22 46 30 M64 14 Q58 22 64 30"), 4)
         dropShadow(cup)
         stroke(p("M86 52 Q104 52 104 66 Q104 80 86 80"), 5)
         shape(cup, tint ?? Self.gold)
-        stroke(p("M40 64 Q45 58 50 64 M60 64 Q65 58 70 64"), 4)
-        shape(p("M44 76 Q55 86 66 76 Z"), ink, line: 3)
+        stroke(p("M24 58 H86"), 4)
     }
 
     private func park() {
         let main = tint ?? Self.green
-        stroke(p("M60 94 L60 60"), 5)
-        shape(p("M58 82 Q30 84 22 58 Q48 54 58 80 Z"), main)
-        fill(p("M10 108 Q60 66 110 108 Z"))
-        shape(circle(60, 40, 26), main)
-        stroke(p("M48 38 Q52 32 56 38 M64 38 Q68 32 72 38"), 4)
-        stroke(p("M50 48 Q60 56 70 48"), 4)
+        stroke(p("M60 104 L60 64"), 5)
+        stroke(p("M24 104 H96"), 5)
+        shape(p("M58 88 Q34 90 28 68 Q50 64 58 86 Z"), main)
+        block(circle(60, 44, 28), main)
+        stroke(p("M60 44 V64 M60 52 L70 44"), 4)
     }
 
     private func events() {
@@ -200,7 +202,7 @@ private struct DalilIconPainter {
         rotated.translateBy(x: 60, y: 60)
         rotated.rotate(by: .degrees(-12))
         rotated.translateBy(x: -60, y: -60)
-        let painter = DalilIconPainter(context: rotated, tint: tint, shadow: shadow)
+        let painter = DalilIconPainter(context: rotated, tint: tint, shadow: shadow, ink: ink, paper: paper)
         painter.ticket()
     }
 
@@ -286,8 +288,6 @@ private struct DalilIconPainter {
         stroke(p("M104 60 V104"), 5)
         block(circle(62, 64, 30), main)
         shape(circle(62, 64, 19), paper)
-        stroke(p("M53 61 Q56 56 59 61 M65 61 Q68 56 71 61"), 3.5)
-        stroke(p("M55 69 Q62 75 69 69"), 3.5)
     }
 
     private func home() {

@@ -1,16 +1,31 @@
 import SwiftUI
 
+/// The Dalil D-arrow: straight parallel edges, one slant, one clean curve
+/// (from the "شعار دليلك" artboard). Flat, no outline, inside the app.
 struct BrandMark: View {
     var size: CGFloat = 28
-    var color: Color = .white
+    var color: Color = AppColors.accent
     var green: Bool = false
 
     var body: some View {
-        Image(green ? "DalilMarkGreen" : "DalilMark")
-            .resizable()
-            .scaledToFit()
+        DalilLogoShape()
+            .fill(green ? AppColors.mint : color)
             .frame(width: size, height: size)
             .accessibilityHidden(true)
+    }
+}
+
+struct DalilLogoShape: Shape {
+    func path(in rect: CGRect) -> Path {
+        let mark = SVGPathParser.path(
+            "M58 36 H106 C148 36 174 66 174 100 C174 134 148 164 106 164 H26 L39 112 H96 V134 L138 100 L96 66 V88 H45 Z"
+        )
+        // The artboard's 200×200 box; the mark spans x 26…174, y 36…164.
+        let box = CGRect(x: 26, y: 36, width: 148, height: 128)
+        let scale = min(rect.width / box.width, rect.height / box.height)
+        let dx = rect.midX - box.midX * scale
+        let dy = rect.midY - box.midY * scale
+        return mark.applying(CGAffineTransform(a: scale, b: 0, c: 0, d: scale, tx: dx, ty: dy))
     }
 }
 

@@ -24,7 +24,7 @@ struct AccountView: View {
                     savedRow(location)
                 }
                 Button { router.presentMapPicker(.add) } label: {
-                    rowLabel("plus", t("home.quick.add"))
+                    glyphLabel(.add, t("home.quick.add"))
                 }
             } header: {
                 Text(t("account.myPlaces"))
@@ -126,58 +126,43 @@ struct AccountView: View {
 
     // MARK: Header
 
+    /// Theme header: the black sign card with the D-arrow and a single orange action.
     private var header: some View {
-        HStack(spacing: AppSpacing.item) {
-            avatar
-            VStack(alignment: .leading, spacing: AppSpacing.xxs) {
+        HStack(alignment: .center, spacing: AppSpacing.item) {
+            VStack(alignment: .leading, spacing: AppSpacing.tight) {
                 if let user = environment.auth.currentUser {
                     Text(user.displayName)
-                        .appText(.title)
-                        .foregroundStyle(AppColors.primaryText)
+                        .font(AppTypography.extraBold(24))
+                        .foregroundStyle(AppColors.cream)
                         .lineLimit(1)
                     Text(t("role.\(user.role.rawValue)"))
                         .appText(.subhead)
-                        .foregroundStyle(AppColors.secondaryText)
+                        .foregroundStyle(AppColors.cream.opacity(0.75))
                 } else {
                     Text(t("account.signInPrompt"))
-                        .appText(.headline)
-                        .foregroundStyle(AppColors.primaryText)
+                        .font(AppTypography.extraBold(22))
+                        .foregroundStyle(AppColors.cream)
                         .fixedSize(horizontal: false, vertical: true)
                     Button { router.isShowingAuth = true } label: {
                         Text(t("auth.signIn"))
-                            .appText(.subhead)
-                            .foregroundStyle(AppColors.warmBackground)
-                            .padding(.horizontal, AppSpacing.item)
-                            .frame(height: AppSize.chip)
-                            .background(AppColors.primaryText)
+                            .appText(.headline)
+                            .foregroundStyle(AppColors.onAccent)
+                            .padding(.horizontal, AppSpacing.screen)
+                            .frame(height: AppSize.chip + AppSpacing.xxs)
+                            .background(AppColors.accent)
                             .clipShape(Capsule())
                     }
                     .buttonStyle(.plain)
-                    .padding(.top, AppSpacing.xxs)
                 }
             }
-            Spacer(minLength: 0)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            BrandMark(size: 52)
         }
-        .padding(.vertical, AppSpacing.tight)
-        .listRowBackground(AppColors.cardSurface)
-    }
-
-    private var avatar: some View {
-        Group {
-            if let initials = initials {
-                Text(initials)
-                    .appText(.title)
-                    .foregroundStyle(AppColors.primaryText)
-            } else {
-                Image(systemName: "person.fill")
-                    .font(.system(size: AppTextStyle.title.size, weight: .semibold))
-                    .foregroundStyle(AppColors.secondaryText)
-            }
-        }
-        .frame(width: AppSize.thumb, height: AppSize.thumb)
-        .background(AppColors.softSand)
-        .clipShape(Circle())
-        .accessibilityHidden(true)
+        .padding(.vertical, AppSpacing.item)
+        .listRowBackground(
+            AppColors.night
+                .overlay(alignment: .bottom) { AppColors.accent.frame(height: 4) }
+        )
     }
 
     private var initials: String? {
@@ -194,7 +179,7 @@ struct AccountView: View {
                 savedRow(location)
             } else {
                 Button { router.presentMapPicker(kind == .home ? .home : .work) } label: {
-                    rowLabel(kind.emptySystemImage, t(kind == .home ? "home.quick.addHome" : "home.quick.addWork"))
+                    glyphLabel(kind.glyph, t(kind == .home ? "home.quick.addHome" : "home.quick.addWork"))
                 }
             }
         }
@@ -203,10 +188,7 @@ struct AccountView: View {
     private func savedRow(_ location: SavedLocation) -> some View {
         Button { router.presentMapPicker(.relocate(location.id)) } label: {
             HStack(spacing: AppSpacing.item) {
-                Image(systemName: location.kind.systemImage)
-                    .font(.system(size: AppTextStyle.body.size, weight: .semibold))
-                    .foregroundStyle(AppColors.secondaryText)
-                    .frame(width: AppSpacing.section)
+                DalilIcon(glyph: location.kind.glyph, size: 28)
                 VStack(alignment: .leading, spacing: AppSpacing.xxs) {
                     Text(location.title(lang))
                         .appText(.body)
@@ -235,6 +217,16 @@ struct AccountView: View {
     }
 
     // MARK: Rows
+
+    private func glyphLabel(_ glyph: DalilGlyph, _ title: String) -> some View {
+        HStack(spacing: AppSpacing.item) {
+            DalilIcon(glyph: glyph, size: 28)
+            Text(title)
+                .appText(.body)
+                .foregroundStyle(AppColors.primaryText)
+            Spacer(minLength: 0)
+        }
+    }
 
     private func rowLabel(_ icon: String, _ title: String) -> some View {
         Label {
@@ -877,7 +869,10 @@ struct HomeBrowseView: View {
 
     private func isTourism(_ place: Place) -> Bool {
         if place.category == .viewpoint { return true }
-        let blob = (place.nameAr + " " + place.nameEn + " " + place.shortDescriptionAr).lowercased()
+        let food: Set<PlaceCategory> = [.restaurant, .dessert, .cafe, .cowork, .gym, .pharmacy]
+        if food.contains(place.category) { return false }
+        // Names only: descriptions say things like "قرب قصر الحكم" for any place nearby.
+        let blob = (place.nameAr + " " + place.nameEn).lowercased()
         let keys = ["متحف", "museum", "قصر", "palace", "برج", "tower", "سياح", "attraction", "heritage", "تراث"]
         return keys.contains { blob.contains($0) }
     }

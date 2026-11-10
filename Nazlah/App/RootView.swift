@@ -132,5 +132,7 @@ struct MainTabView: View {
             }
         }
         .toolbar(.hidden, for: .tabBar)
+        .toolbarBackground(AppColors.warmBackground, for: .navigationBar)
+        .toolbarBackground(.visible, for: .navigationBar)
     }
 }
