@@ -144,11 +144,12 @@ struct StationCard: View {
     }
 }
 
-/// The home "station sign": your Sahm arrow + the station name on the line's color,
-/// then one row per direction with its own arrow, like a platform sign.
+/// The home station sign, Music OS style: the real metro line drawn around the station
+/// (true angle and direction from the station coordinates), then one row per direction.
 struct HomeStationHero: View {
     var station: MetroStation
     var lines: [MetroLine]
+    var routes: StationRoutes
     var walkMinutes: Int
     var walkMeters: Int
     var rows: [(direction: String, minutes: [Int])]
@@ -156,19 +157,18 @@ struct HomeStationHero: View {
     var onOpen: () -> Void
 
     private var primary: LineColor { lines.first?.lineColor ?? .blue }
-    private var signInk: Color { primary.onChip }
+    private let signInk = AppColors.cream
 
     var body: some View {
         Button(action: onOpen) {
             VStack(alignment: .leading, spacing: 0) {
                 signHead
-                MetroStripes(lines: lines.map(\.lineColor))
                 VStack(spacing: 0) {
                     ForEach(Array(rows.prefix(2).enumerated()), id: \.offset) { index, row in
                         if index > 0 {
                             AppColors.divider.frame(height: 1)
                         }
-                        directionRow(row, pointing: index == 0 ? .trailing : .leading)
+                        directionRow(row)
                     }
                 }
                 .padding(.horizontal, AppSpacing.screen)
@@ -186,7 +186,7 @@ struct HomeStationHero: View {
     }
 
     private var signHead: some View {
-        HStack(alignment: .top, spacing: AppSpacing.item) {
+        VStack(alignment: .leading, spacing: 0) {
             VStack(alignment: .leading, spacing: AppSpacing.tight) {
                 HStack(spacing: AppSpacing.chip) {
                     ForEach(lines) { line in
@@ -197,7 +197,6 @@ struct HomeStationHero: View {
                             .frame(height: 22)
                             .background(line.lineColor.chipColor)
                             .clipShape(Capsule())
-                            .overlay(Capsule().stroke(signInk.opacity(0.55), lineWidth: 1))
                     }
                 }
                 Text(station.localizedName(language: language))
@@ -208,21 +207,22 @@ struct HomeStationHero: View {
                     .multilineTextAlignment(.leading)
                 Text(verbatim: DalilCopy.walkAndDistance(minutes: walkMinutes, meters: walkMeters, language))
                     .appText(.subhead)
-                    .foregroundStyle(signInk.opacity(0.85))
+                    .foregroundStyle(signInk.opacity(0.75))
                     .lineLimit(1)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
-            SahmArrow(pointing: .forward, color: signInk)
-                .frame(width: 64, height: 64)
+            .padding([.horizontal, .top], AppSpacing.screen)
+            StationLineMap(routes: routes, stationFill: signInk, ink: AppColors.night)
+                .frame(height: 112)
         }
-        .padding(AppSpacing.screen)
-        .background(primary.chipColor)
+        .background(AppColors.night)
     }
 
-    private func directionRow(_ row: (direction: String, minutes: [Int]), pointing: SahmArrow.Pointing) -> some View {
+    private func directionRow(_ row: (direction: String, minutes: [Int])) -> some View {
         HStack(spacing: AppSpacing.item) {
-            SahmArrow(pointing: pointing, color: primary.color)
-                .frame(width: 26, height: 26)
+            Circle()
+                .fill(primary.color)
+                .frame(width: 12, height: 12)
             Text(verbatim: DalilCopy.toward(row.direction, language))
                 .appText(.headline)
                 .foregroundStyle(AppColors.primaryText)
@@ -247,43 +247,117 @@ struct HomeStationHero: View {
     }
 }
 
-/// Dalil's Sahm arrow (the hand-drawn arrow mark). `.forward` keeps the drawn up-and-ahead
-/// angle; `.leading` / `.trailing` lay it flat. All three mirror in Arabic.
-struct SahmArrow: View {
-    enum Pointing {
-        case forward
-        case leading
-        case trailing
+/// Each line through a station, as points in meters around it (x east, y south).
+struct StationRoutes {
+    struct Route {
+        var line: LineColor
+        var points: [CGPoint]
+        var neighbors: [CGPoint]
     }
 
-    var pointing: Pointing = .forward
-    var color: Color = AppColors.accent
+    var routes: [Route]
+    /// Meters from the station to the edge of the drawing's short side.
+    var radius: Double
 
-    var body: some View {
-        Image("SahmMark")
-            .renderingMode(.template)
-            .resizable()
-            .scaledToFit()
-            .foregroundStyle(color)
-            .rotationEffect(.degrees(pointing == .forward ? 0 : 68))
-            .scaleEffect(x: pointing == .leading ? -1 : 1, y: 1)
-            .flipsForRightToLeftLayoutDirection(true)
-            .accessibilityHidden(true)
+    init(station: MetroStation, catalog: MetroCatalog) {
+        let lat0 = station.latitude
+        let lon0 = station.longitude
+        let metersPerLon = 111_320 * cos(lat0 * .pi / 180)
+        func local(_ stop: MetroStation) -> CGPoint {
+            CGPoint(
+                x: (stop.longitude - lon0) * metersPerLon,
+                y: -(stop.latitude - lat0) * 110_540
+            )
+        }
+
+        var routes: [Route] = []
+        var nearest: [Double] = []
+        for line in catalog.lines(for: station) {
+            let stops = catalog.stations(on: line.id)
+            guard let index = stops.firstIndex(where: { $0.id == station.id }), stops.count > 1 else { continue }
+            let window = stops[max(0, index - 3)...min(stops.count - 1, index + 3)]
+            let points = window.map(local)
+            let neighbors = window.filter { $0.id != station.id }.map(local)
+            for offset in [-1, 1] where stops.indices.contains(index + offset) {
+                let p = local(stops[index + offset])
+                nearest.append(Double(hypot(p.x, p.y)))
+            }
+            routes.append(Route(line: line.lineColor, points: points, neighbors: neighbors))
+        }
+        self.routes = routes
+        let reach = nearest.min() ?? 1_200
+        self.radius = min(max(reach * 1.25, 600), 2_500)
     }
 }
 
-/// Thin parallel metro-line stripes (the Music OS line motif, kept light).
-struct MetroStripes: View {
-    var lines: [LineColor]
-    var stripe: CGFloat = 4
+/// Draws the station's lines at their real angle; the line draws itself in,
+/// then neighbor stations and the station dot appear.
+struct StationLineMap: View {
+    var routes: StationRoutes
+    var stationFill: Color
+    var ink: Color
+    var lineWidth: CGFloat = 9
+
+    @State private var progress: CGFloat = 0
+    @State private var settled = false
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     var body: some View {
-        VStack(spacing: 0) {
-            ForEach(Array((lines.isEmpty ? [LineColor.blue] : lines).enumerated()), id: \.offset) { _, line in
-                line.color.frame(height: stripe)
+        GeometryReader { geo in
+            let scale = (min(geo.size.width, geo.size.height) / 2) / CGFloat(routes.radius)
+            let center = CGPoint(x: geo.size.width / 2, y: geo.size.height / 2)
+            ZStack {
+                ForEach(Array(routes.routes.enumerated()), id: \.offset) { _, route in
+                    ProjectedPolyline(points: route.points, scale: scale)
+                        .trim(from: 0, to: progress)
+                        .stroke(route.line.color, style: StrokeStyle(lineWidth: lineWidth, lineCap: .round, lineJoin: .round))
+                    ForEach(Array(route.neighbors.enumerated()), id: \.offset) { _, stop in
+                        Circle()
+                            .fill(stationFill)
+                            .frame(width: lineWidth * 0.55, height: lineWidth * 0.55)
+                            .position(x: center.x + stop.x * scale, y: center.y + stop.y * scale)
+                            .opacity(settled ? 1 : 0)
+                    }
+                }
+                Circle()
+                    .fill(stationFill)
+                    .overlay(Circle().stroke(ink, lineWidth: 3))
+                    .frame(width: lineWidth * 2.2, height: lineWidth * 2.2)
+                    .scaleEffect(settled ? 1 : 0.1)
+                    .position(center)
             }
         }
+        .clipped()
+        .environment(\.layoutDirection, .leftToRight)
         .accessibilityHidden(true)
+        .onAppear {
+            guard progress == 0 else { return }
+            if reduceMotion {
+                progress = 1
+                settled = true
+                return
+            }
+            withAnimation(.easeInOut(duration: 1.2)) { progress = 1 }
+            withAnimation(.spring(response: 0.45, dampingFraction: 0.7).delay(1.0)) { settled = true }
+        }
+    }
+}
+
+private struct ProjectedPolyline: Shape {
+    var points: [CGPoint]
+    var scale: CGFloat
+
+    func path(in rect: CGRect) -> Path {
+        var path = Path()
+        for (index, point) in points.enumerated() {
+            let projected = CGPoint(x: rect.midX + point.x * scale, y: rect.midY + point.y * scale)
+            if index == 0 {
+                path.move(to: projected)
+            } else {
+                path.addLine(to: projected)
+            }
+        }
+        return path
     }
 }
 

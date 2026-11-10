@@ -161,6 +161,7 @@ struct AroundYouView: View {
                 HomeStationHero(
                     station: station,
                     lines: catalog.lines(for: station),
+                    routes: StationRoutes(station: station, catalog: catalog),
                     walkMinutes: walkMinutes,
                     walkMeters: meters,
                     rows: MetroDepartureClock.rows(station: station, catalog: catalog, language: lang),
