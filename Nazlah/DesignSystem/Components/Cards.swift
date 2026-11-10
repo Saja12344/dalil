@@ -144,8 +144,8 @@ struct StationCard: View {
     }
 }
 
-/// The home station sign, Music OS style: the real metro line drawn around the station
-/// (true angle and direction from the station coordinates), then one row per direction.
+/// The home station card: a thick metro band (the line's real heading, snapped to
+/// 0/45/90°) running off the edge, the station name, then a cream "trains from here" panel.
 struct HomeStationHero: View {
     var station: MetroStation
     var lines: [MetroLine]
@@ -156,100 +156,150 @@ struct HomeStationHero: View {
     var language: AppLanguage
     var onOpen: () -> Void
 
-    private var primary: LineColor { lines.first?.lineColor ?? .blue }
-    private let signInk = AppColors.cream
     @Environment(\.layoutDirection) private var layoutDirection
+
+    private var primary: LineColor { lines.first?.lineColor ?? .blue }
+    private let panel = Color(light: "EFEBE4", dark: "ECE6DB")
+    private let panelInk = Color(hex: "111111")
 
     var body: some View {
         Button(action: onOpen) {
             VStack(alignment: .leading, spacing: 0) {
-                signHead
-                VStack(spacing: 0) {
-                    ForEach(Array(rows.prefix(2).enumerated()), id: \.offset) { index, row in
-                        if index > 0 {
-                            AppColors.divider.frame(height: 1)
+                ZStack(alignment: .topLeading) {
+                    MetroBand(
+                        lines: routes.routes.isEmpty ? [primary] : routes.routes.map(\.line),
+                        heading: routes.routes.first?.heading ?? CGVector(dx: 1, dy: -1),
+                        horizontalToRight: layoutDirection == .rightToLeft
+                    )
+                    .frame(height: 116)
+                    Text(DalilCopy.t("home.nearestShort", language))
+                        .appText(.subhead)
+                        .foregroundStyle(AppColors.secondaryText)
+                        .padding(.top, AppSpacing.screen + AppSpacing.xxs)
+                        .padding(.horizontal, AppSpacing.screen + AppSpacing.xxs)
+                }
+                VStack(alignment: .leading, spacing: AppSpacing.tight) {
+                    Text(station.localizedName(language: language))
+                        .font(AppTypography.extraBold(40))
+                        .foregroundStyle(AppColors.primaryText)
+                        .lineLimit(2)
+                        .minimumScaleFactor(0.7)
+                        .multilineTextAlignment(.leading)
+                    HStack(spacing: AppSpacing.item) {
+                        ForEach(lines) { line in
+                            LineBadge(line: line.lineColor, style: .number, language: language)
                         }
-                        directionRow(row)
+                        Text(verbatim: DalilCopy.walkAndDistance(minutes: walkMinutes, meters: walkMeters, language))
+                            .appText(.body)
+                            .foregroundStyle(AppColors.secondaryText)
+                            .lineLimit(1)
                     }
                 }
-                .padding(.horizontal, AppSpacing.screen)
-                .background(AppColors.cardSurface)
+                .padding(.horizontal, AppSpacing.screen + AppSpacing.xxs)
+                .padding(.top, AppSpacing.tight)
+                trainsPanel
+                    .padding(AppSpacing.screen + AppSpacing.xxs)
             }
-            .clipShape(RoundedRectangle(cornerRadius: AppRadius.card, style: .continuous))
-            .overlay(
-                RoundedRectangle(cornerRadius: AppRadius.card, style: .continuous)
-                    .stroke(AppColors.border, lineWidth: 1)
-            )
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(AppColors.cardSurface)
+            .clipShape(RoundedRectangle(cornerRadius: 28, style: .continuous))
         }
         .buttonStyle(.plain)
         .accessibilityElement(children: .combine)
         .accessibilityHint(DalilCopy.t("home.details", language))
     }
 
-    private var signHead: some View {
-        VStack(alignment: .leading, spacing: AppSpacing.tight) {
-            HStack(spacing: AppSpacing.chip) {
-                ForEach(lines) { line in
-                    Text(line.lineColor.code)
-                        .font(AppTypography.bold(13))
-                        .foregroundStyle(line.lineColor.onChip)
-                        .padding(.horizontal, AppSpacing.tight)
-                        .frame(height: 22)
-                        .background(line.lineColor.chipColor)
-                        .clipShape(Capsule())
+    private var trainsPanel: some View {
+        VStack(alignment: .leading, spacing: AppSpacing.item) {
+            Text(DalilCopy.t("home.trainsHere", language))
+                .appText(.subhead)
+                .foregroundStyle(panelInk.opacity(0.6))
+            ForEach(Array(rows.prefix(2).enumerated()), id: \.offset) { _, row in
+                HStack(spacing: AppSpacing.item) {
+                    LineBadge(line: primary, style: .number, language: language)
+                    Text(verbatim: DalilCopy.toward(row.direction, language))
+                        .font(AppTypography.semibold(20))
+                        .foregroundStyle(panelInk)
+                        .lineLimit(1)
                 }
             }
-            Text(station.localizedName(language: language))
-                .font(AppTypography.extraBold(30))
-                .foregroundStyle(signInk)
-                .lineLimit(2)
-                .minimumScaleFactor(0.8)
-                .multilineTextAlignment(.leading)
-            Text(verbatim: DalilCopy.walkAndDistance(minutes: walkMinutes, meters: walkMeters, language))
-                .appText(.subhead)
-                .foregroundStyle(signInk.opacity(0.75))
-                .lineLimit(1)
-            Spacer(minLength: 0)
         }
-        .frame(maxWidth: .infinity, minHeight: 176, alignment: .topLeading)
-        .padding(AppSpacing.screen)
-        .background {
-            StationLineMap(
-                routes: routes,
-                stationFill: signInk,
-                ink: AppColors.night,
-                anchor: UnitPoint(x: layoutDirection == .rightToLeft ? 0.26 : 0.74, y: 0.55)
-            )
+        .padding(AppSpacing.screen + AppSpacing.xxs)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(panel)
+        .clipShape(RoundedRectangle(cornerRadius: 24, style: .continuous))
+    }
+}
+
+/// Thick metro-map band: a straight run off one edge, one bend, then the line's
+/// heading snapped to 0/45/90° off the top. Extra lines run parallel below.
+struct MetroBand: View {
+    var lines: [LineColor]
+    var heading: CGVector
+    var horizontalToRight: Bool
+    var thickness: CGFloat = 28
+
+    @State private var progress: CGFloat = 0
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
+    var body: some View {
+        ZStack {
+            ForEach(Array(lines.prefix(3).enumerated()), id: \.offset) { index, line in
+                MetroBandShape(
+                    angle: snappedAngle,
+                    toRight: horizontalToRight,
+                    drop: CGFloat(index) * (thickness + 6),
+                    thickness: thickness
+                )
+                .trim(from: 0, to: progress)
+                .stroke(line.color, style: StrokeStyle(lineWidth: thickness, lineCap: .butt, lineJoin: .round))
+            }
         }
-        .background(AppColors.night)
+        .clipped()
+        .environment(\.layoutDirection, .leftToRight)
+        .accessibilityHidden(true)
+        .onAppear {
+            guard progress == 0 else { return }
+            if reduceMotion {
+                progress = 1
+            } else {
+                withAnimation(.easeInOut(duration: 1.1)) { progress = 1 }
+            }
+        }
     }
 
-    private func directionRow(_ row: (direction: String, minutes: [Int])) -> some View {
-        HStack(spacing: AppSpacing.item) {
-            Circle()
-                .fill(primary.color)
-                .frame(width: 12, height: 12)
-            Text(verbatim: DalilCopy.toward(row.direction, language))
-                .appText(.headline)
-                .foregroundStyle(AppColors.primaryText)
-                .lineLimit(1)
-                .frame(maxWidth: .infinity, alignment: .leading)
-            if let next = row.minutes.first {
-                VStack(alignment: .trailing, spacing: 0) {
-                    Text(verbatim: DalilCopy.shortMinutes(next, language))
-                        .font(AppTypography.extraBold(22))
-                        .monospacedDigit()
-                        .foregroundStyle(AppColors.primaryText)
-                    let then = DalilCopy.thenMinutes(row.minutes, language)
-                    if !then.isEmpty {
-                        Text(verbatim: then)
-                            .appLiveNumber(.caption)
-                            .foregroundStyle(AppColors.secondaryText)
-                    }
-                }
-            }
-        }
-        .padding(.vertical, AppSpacing.item)
+    /// Degrees above horizontal for the rising part: 0, 45 or 90.
+    private var snappedAngle: Double {
+        let degrees = abs(atan2(Double(abs(heading.dy)), Double(abs(heading.dx))) * 180 / .pi)
+        if degrees < 22.5 { return 0 }
+        if degrees < 67.5 { return 45 }
+        return 90
+    }
+}
+
+private struct MetroBandShape: Shape {
+    var angle: Double
+    var toRight: Bool
+    var drop: CGFloat
+    var thickness: CGFloat
+
+    func path(in rect: CGRect) -> Path {
+        let y = rect.height * 0.62 + drop
+        let bendX = rect.width * (toRight ? 0.46 : 0.54) + (toRight ? -1 : 1) * drop * 0.41
+        let reach = rect.width + rect.height
+        let straightEnd = CGPoint(x: toRight ? rect.maxX + thickness : rect.minX - thickness, y: y)
+        let bend = CGPoint(x: bendX, y: y)
+        let radians = angle * .pi / 180
+        let away: CGFloat = toRight ? -1 : 1
+        let far = CGPoint(
+            x: bend.x + away * CGFloat(cos(radians)) * reach,
+            y: bend.y - CGFloat(sin(radians)) * reach
+        )
+        var path = Path()
+        path.move(to: straightEnd)
+        path.addLine(to: bend)
+        path.addLine(to: far)
+        return path
     }
 }
 
@@ -261,6 +311,8 @@ struct StationRoutes {
         var line: LineColor
         var points: [CGPoint]
         var neighbors: [CGPoint]
+        /// Previous stop to next stop, screen axes (x east, y south).
+        var heading: CGVector
     }
 
     var routes: [Route]
@@ -312,7 +364,10 @@ struct StationRoutes {
                 points.append(extend(points[points.count - 1], away: points[points.count - 2]))
             }
             let neighbors = window.filter { $0.id != station.id }.map(local)
-            return Route(line: item.line.lineColor, points: points, neighbors: neighbors)
+            let before = local(item.stops[max(0, item.index - 1)])
+            let after = local(item.stops[min(item.stops.count - 1, item.index + 1)])
+            let heading = CGVector(dx: after.x - before.x, dy: after.y - before.y)
+            return Route(line: item.line.lineColor, points: points, neighbors: neighbors, heading: heading)
         }
     }
 }
