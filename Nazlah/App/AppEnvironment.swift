@@ -277,6 +277,14 @@ struct SavedLocation: Identifiable, Codable, Equatable, Hashable {
             }
         }
 
+        var glyph: DalilGlyph {
+            switch self {
+            case .home: return .home
+            case .work: return .work
+            case .custom: return .pin
+            }
+        }
+
         var emptySystemImage: String {
             switch self {
             case .home: return "house"

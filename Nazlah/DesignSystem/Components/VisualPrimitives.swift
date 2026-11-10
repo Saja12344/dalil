@@ -150,11 +150,13 @@ struct PlacePhotoView: View {
 
     private var glyphView: some View {
         GeometryReader { geo in
-            Image(systemName: glyph)
-                .font(.system(size: max(AppTextStyle.body.size, min(geo.size.width, geo.size.height) * 0.28), weight: .semibold))
-                .foregroundStyle(AppColors.categoryInk(place.category))
-                .frame(width: geo.size.width, height: geo.size.height)
-                .background(AppColors.categoryTint(place.category))
+            DalilIcon(
+                glyph: place.category.dalilGlyph,
+                size: max(AppSpacing.section, min(geo.size.width, geo.size.height) * 0.42),
+                tint: AppColors.category(place.category)
+            )
+            .frame(width: geo.size.width, height: geo.size.height)
+            .background(AppColors.categoryTint(place.category))
         }
     }
 }

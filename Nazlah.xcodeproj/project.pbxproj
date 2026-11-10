@@ -19,6 +19,7 @@
 		2445C90B6BFAEF753F1220F6 /* Alexandria-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACC9657AE0434188B685F34F /* Alexandria-Bold.ttf */; };
 		288B83D12EE93CCDF0605EB4 /* AppChip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A46DD3340A66E4CDBF2B39F /* AppChip.swift */; };
 		A7C3E91F4B2D80C156E4D0A2 /* DalilAtoms.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C3E91F4B2D80C156E4D0A1 /* DalilAtoms.swift */; };
+		D1A11C0A5E3F4B2C8D9E0F12 /* DalilIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A11C0A5E3F4B2C8D9E0F11 /* DalilIcons.swift */; };
 		2DEF96B471C54280B236CE07 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 6F02810D952D7470E774A89E /* Localizable.xcstrings */; };
 		2F66460FDB99BE6D19FA06FD /* Alexandria-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 765455ACC3963C025A3E7719 /* Alexandria-Regular.ttf */; };
 		4231B50B141ED20AEE3D850C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4303F19F842082949EF8D4B /* Assets.xcassets */; };
@@ -82,6 +83,7 @@
 		1A1FF5E5ECE4C4312C977888 /* MetroMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroMapView.swift; sourceTree = "<group>"; };
 		1A46DD3340A66E4CDBF2B39F /* AppChip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppChip.swift; sourceTree = "<group>"; };
 		A7C3E91F4B2D80C156E4D0A1 /* DalilAtoms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DalilAtoms.swift; sourceTree = "<group>"; };
+		D1A11C0A5E3F4B2C8D9E0F11 /* DalilIcons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DalilIcons.swift; sourceTree = "<group>"; };
 		1BA34928DB3B92DD1B5A2860 /* Alexandria-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Alexandria-SemiBold.ttf"; sourceTree = "<group>"; };
 		F3D91A7C4E2B8C6A1D5F0E9B /* Changa-Variable.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Changa-Variable.ttf"; sourceTree = "<group>"; };
 		2E11B1DB21FD2301BCB351BD /* AccessAndSafety.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessAndSafety.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			children = (
 				1A46DD3340A66E4CDBF2B39F /* AppChip.swift */,
 				A7C3E91F4B2D80C156E4D0A1 /* DalilAtoms.swift */,
+				D1A11C0A5E3F4B2C8D9E0F11 /* DalilIcons.swift */,
 				840B6F3E31F3E44B2E8D4FB4 /* BottomNavigation.swift */,
 				0D958ABD78EA1C9C083FB9E8 /* BrandMark.swift */,
 				85E25DB19F9371F34DABF461 /* Cards.swift */,
@@ -594,6 +597,7 @@
 				F18F30227243DC6708BB7091 /* AddPlaceFlowView.swift in Sources */,
 				288B83D12EE93CCDF0605EB4 /* AppChip.swift in Sources */,
 				A7C3E91F4B2D80C156E4D0A2 /* DalilAtoms.swift in Sources */,
+				D1A11C0A5E3F4B2C8D9E0F12 /* DalilIcons.swift in Sources */,
 				67351A35313CF861B6ADA017 /* AppEnums.swift in Sources */,
 				DDFE8EA70483B2245E8CDC7F /* AppEnvironment.swift in Sources */,
 				181136A132E0F481E3D4A0AB /* AroundYouView.swift in Sources */,

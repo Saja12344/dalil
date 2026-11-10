@@ -87,7 +87,7 @@ struct AroundYouView: View {
                 }
                 SavedPlaceChip(
                     title: t("home.quick.add"),
-                    systemImage: "plus",
+                    glyph: .add,
                     isPlaceholder: true
                 ) {
                     router.presentMapPicker(.add)
@@ -104,7 +104,7 @@ struct AroundYouView: View {
             } else {
                 SavedPlaceChip(
                     title: t(kind == .home ? "home.quick.addHome" : "home.quick.addWork"),
-                    systemImage: kind.emptySystemImage,
+                    glyph: kind.glyph,
                     isPlaceholder: true
                 ) {
                     router.presentMapPicker(kind == .home ? .home : .work)
@@ -117,7 +117,7 @@ struct AroundYouView: View {
     private func savedChip(_ location: SavedLocation) -> some View {
         SavedPlaceChip(
             title: location.title(lang),
-            systemImage: location.kind.systemImage,
+            glyph: location.kind.glyph,
             isPlaceholder: false
         ) {
             useSaved(location)
@@ -300,25 +300,25 @@ struct ServiceStatusSheet: View {
 
 struct SavedPlaceChip: View {
     var title: String
-    var systemImage: String
+    var glyph: DalilGlyph
     var isPlaceholder: Bool
     var action: () -> Void
 
     var body: some View {
         Button(action: action) {
             HStack(spacing: AppSpacing.chip) {
-                Image(systemName: systemImage)
-                    .font(.system(size: AppTextStyle.subhead.size, weight: .semibold))
+                DalilIcon(glyph: glyph, size: 22, tint: isPlaceholder ? AppColors.cream : nil, shadow: !isPlaceholder)
                 Text(title)
                     .appText(.subhead)
                     .lineLimit(1)
             }
             .foregroundStyle(isPlaceholder ? AppColors.secondaryText : AppColors.primaryText)
-            .padding(.horizontal, AppSpacing.item)
-            .frame(height: AppSize.chip)
-            .background(AppColors.softSand)
+            .padding(.leading, AppSpacing.tight)
+            .padding(.trailing, AppSpacing.item)
+            .frame(height: AppSize.chip + AppSpacing.xxs)
+            .background(AppColors.cardSurface)
             .clipShape(Capsule())
-            .shadow(color: AppColors.navy.opacity(0.06), radius: 8, y: 2)
+            .overlay(Capsule().stroke(AppColors.border, lineWidth: 1))
         }
         .buttonStyle(.plain)
         .accessibilityLabel(title)

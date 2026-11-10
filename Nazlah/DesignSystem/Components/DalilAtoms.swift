@@ -313,9 +313,7 @@ struct CategoryChip: View {
 
     var body: some View {
         HStack(spacing: AppSpacing.chip) {
-            Image(systemName: category.symbolName)
-                .font(.system(size: AppTextStyle.subhead.size, weight: .semibold))
-                .foregroundStyle(isSelected ? AppColors.cream : AppColors.categoryInk(category))
+            DalilIcon(glyph: category.dalilGlyph, size: 22, tint: AppColors.category(category), shadow: false)
             Text(title)
                 .appText(.subhead)
                 .foregroundStyle(isSelected ? AppColors.cream : AppColors.primaryText)
@@ -333,19 +331,28 @@ struct CategoryTile: View {
     var language: AppLanguage
 
     var body: some View {
-        VStack(spacing: AppSpacing.tight) {
-            Image(systemName: browse.placeCategory.symbolName)
-                .font(.system(size: AppSpacing.section, weight: .semibold))
-                .foregroundStyle(AppColors.categoryInk(browse.placeCategory))
+        VStack(spacing: AppSpacing.chip) {
+            DalilIcon(
+                glyph: browse.placeCategory.dalilGlyph,
+                size: 44,
+                tint: AppColors.category(browse.placeCategory)
+            )
             Text(DalilCopy.t(browse.copyKey, language))
                 .appText(.subhead)
                 .foregroundStyle(AppColors.primaryText)
                 .lineLimit(1)
         }
         .frame(maxWidth: .infinity)
-        .frame(height: AppSize.thumb + AppSpacing.section)
-        .background(AppColors.categoryTint(browse.placeCategory))
+        .frame(height: AppSize.thumb + AppSpacing.xl)
+        .background(AppColors.cardSurface)
+        .overlay(alignment: .bottom) {
+            AppColors.category(browse.placeCategory).frame(height: 4)
+        }
         .clipShape(RoundedRectangle(cornerRadius: AppRadius.card, style: .continuous))
+        .overlay(
+            RoundedRectangle(cornerRadius: AppRadius.card, style: .continuous)
+                .stroke(AppColors.border, lineWidth: 1)
+        )
         .accessibilityElement(children: .combine)
         .accessibilityLabel(DalilCopy.t(browse.copyKey, language))
     }
