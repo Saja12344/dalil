@@ -185,15 +185,10 @@ struct HomeStationHero: View {
                         .lineLimit(2)
                         .minimumScaleFactor(0.7)
                         .multilineTextAlignment(.leading)
-                    HStack(spacing: AppSpacing.item) {
-                        ForEach(lines) { line in
-                            LineBadge(line: line.lineColor, style: .number, language: language)
-                        }
-                        Text(verbatim: DalilCopy.walkAndDistance(minutes: walkMinutes, meters: walkMeters, language))
-                            .appText(.body)
-                            .foregroundStyle(AppColors.secondaryText)
-                            .lineLimit(1)
-                    }
+                    Text(verbatim: DalilCopy.walkAndDistance(minutes: walkMinutes, meters: walkMeters, language))
+                        .appText(.body)
+                        .foregroundStyle(AppColors.secondaryText)
+                        .lineLimit(1)
                 }
                 .padding(.horizontal, AppSpacing.screen + AppSpacing.xxs)
                 .padding(.top, AppSpacing.tight)
@@ -216,7 +211,10 @@ struct HomeStationHero: View {
                 .foregroundStyle(panelInk.opacity(0.6))
             ForEach(Array(rows.prefix(2).enumerated()), id: \.offset) { _, row in
                 HStack(spacing: AppSpacing.item) {
-                    LineBadge(line: primary, style: .number, language: language)
+                    Circle()
+                        .fill(primary.color)
+                        .frame(width: 14, height: 14)
+                        .accessibilityHidden(true)
                     Text(verbatim: DalilCopy.toward(row.direction, language))
                         .font(AppTypography.semibold(20))
                         .foregroundStyle(panelInk)
